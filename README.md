@@ -18,4 +18,7 @@ Die in diesem Repository bereitgestellten Werkzeuge dienen der Nutzung und Verar
 
 ## Lizenz
 
-Die Lizenzinformationen befinden sich in der Datei [LICENSE.md](https://github.com/BSI-Bund/Stand-der-Technik-Tools/blob/main/LICENSE.md).
+Dieses Repository steht unter der GNU General Public License v3.0 (GPLv3) Lizenz.
+Details sind in der [LICENSE](https://github.com/BSI-Bund/Stand-der-Technik-Tools/blob/main/LICENSE.md) Datei enthalten.
+
+Alle Beiträge zu diesem Repository werden unter denselben Lizenzbedingungen wie das Repository selbst veröffentlicht.
