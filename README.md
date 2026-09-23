@@ -1,53 +1,45 @@
 # Stand der Technik-Radar
 
-Das Radar erstellt eine statische HTML-Ansicht der vierstufigen Stand-der-Technik-Taxonomie und ein separates Trendmapping für die BSI-Trendanalysen 2024 und 2025.
+Das Stand der Technik-Radar ist eine interaktive Übersicht über Inhalte der [Stand-der-Technik-Bibliothek](https://github.com/BSI-Bund/Stand-der-Technik-Bibliothek). Es verbindet zwei unterschiedliche Perspektiven: Das **Radar** ordnet Controls und Components in eine vierstufige Taxonomie ein. Das **Trendmapping** zeigt, welche Inhalte thematisch zu ausgewerteten BSI-Trendanalysen passen.
 
-## Datenquellen und Zählweise
+Zur Nutzung öffnen Sie die bereitgestellte Radar-Seite oder Einzel-HTML-Datei in einem aktuellen Browser. Wechseln Sie oben zwischen „Stand der Technik-Radar“ und „Trendmapping“. Die Ansichten lassen sich auch mit der Tastatur bedienen.
 
-Die primäre und einzige automatisch synchronisierte Quelle ist die öffentliche [Stand-der-Technik-Bibliothek](https://github.com/BSI-Bund/Stand-der-Technik-Bibliothek). Der Import untersucht rekursiv OSCAL Catalogs unter `control_layer/**` (einschließlich `sources/**`) sowie Component Definitions unter `implementation_layer/**`. Profiles, Dokumentation und andere JSON-Formate werden ignoriert. Weitere einzelne OSCAL Catalogs können beim Build mit `--extra-catalog` angegeben werden.
+## Das Radar verstehen
 
-Für die Taxonomie werden ausschließlich die vier expliziten OSCAL-Properties `Taxonomy-L1` bis `Taxonomy-L4` des jeweiligen Controls oder der jeweiligen Component gelesen. Der Pfad muss exakt einem Eintrag in `data/source/taxonomy/stand-der-technik.json` entsprechen. Objekte ohne Taxonomie-Properties werden ausgelassen und gezählt; unvollständige, doppelte oder unbekannte Zuordnungen führen zu einem Build-Fehler. Es gibt kein KI-basiertes oder heuristisches Taxonomie-Mapping mehr.
+Die Taxonomie umfasst vier Ebenen:
 
-Das Radar zählt **Vorkommen pro OSCAL-Quelldatei**. Derselbe Control-`alt-identifier` kann in mehreren Katalogkontexten vorkommen und unterschiedliche Taxonomiepfade haben; beide Vorkommen werden gezeigt. Die Kennzahl „Eindeutige Identitäten“ weist zusätzlich die deduplizierte Anzahl aus. Eine manuell übergebene bearbeitete Kopie ersetzt einen öffentlichen Katalog bei gleicher Catalog-UUID oder bei gleichem Titel und mindestens 80 % Überlappung der Control-Identitäten. Gibt es mehrere ähnliche Varianten, wird über den Dateinamen genau eine passende Quelle ausgewählt; bei nicht auflösbarer Mehrdeutigkeit stoppt der Build. Manuell gelieferte lokale Dateipfade werden nicht in die HTML-Ausgabe geschrieben.
+1. NIST-Funktion
+2. Technologiedomäne
+3. Produktkategorie
+4. Produkt- oder Servicegruppe
 
-Das Trendmapping bleibt ein separater, bestehender TF-IDF-/Schlüsselwort-/Facetten-Prozess. Seine Bewertungslogik wurde nicht geändert; lediglich die OSCAL-Eingabe stammt jetzt aus demselben öffentlichen Repository und optionalen Zusatzkatalogen. Die Taxonomie-Properties werden hierfür nicht als Trend-Zuordnung interpretiert.
+Die Zuordnung stammt aus den Taxonomieangaben der jeweiligen Controls und Components; das Radar ermittelt sie nicht selbst. Ein **Control** beschreibt eine Anforderung oder Maßnahme. Eine **Component** beschreibt ein Umsetzungsobjekt in einer Component Definition.
 
-## Voraussetzungen
+In der Gesamtansicht sehen Sie zunächst NIST-Funktionen und Technologiedomänen. Wählen Sie ein Segment aus, um in die tieferen Ebenen zu wechseln und die Unterthemen zu erkunden. Unterhalb des Diagramms erscheinen die zugeordneten Controls und Components mit Titel, Herkunft und vollständigem Taxonomiepfad. Die „Taxonomie als Liste“ bietet dieselben Themen ohne Kreisdiagramm und ist besonders auf schmalen Bildschirmen hilfreich.
 
-- Python 3.11+ und Pakete aus `requirements.txt`
-- Node.js und npm sowie Pakete aus `app/package.json`
-- Git für das Synchronisieren des öffentlichen Repositories
+Mit der Segmentsuche finden Sie Themen im Kreisdiagramm. Die Schaltflächen „+“ und „−“ verändern die Ansicht; „Zur Übersicht“ führt zur Gesamtansicht zurück. In den Detailtabellen können Sie nach ID, Titel, Quelle oder Taxonomie suchen und zwischen dem öffentlichen Repository und gegebenenfalls ergänzten Katalogen filtern. Bei öffentlich verfügbaren Quelldateien führt ein Link direkt zur Quelle. Die Browser-Navigation „Zurück“ und „Vorwärts“ funktioniert auch nach einer Themenauswahl.
 
-## Neue Version erstellen
+### Was die Zahlen bedeuten
 
-```sh
-python3 -m pip install -r requirements.txt
-cd app && npm ci && cd ..
-python3 scripts/sync_repo.py
-python3 scripts/build_all.py
-cd app && npm run build:standalone
-```
+Das Radar zählt **Vorkommen in Quelldateien**, nicht weltweit eindeutige Maßnahmen. Derselbe Control kann in mehreren Katalogen stehen und je nach Kontext unterschiedlichen Taxonomiethemen zugeordnet sein. Solche Vorkommen bleiben getrennt sichtbar. Die Kennzahl „Eindeutige Identitäten“ zeigt zusätzlich, wie viele verschiedene Controls und Components dahinterstehen.
 
-Mit einem zusätzlichen taxonomisierten Kernel-Catalog:
+In das Kreisdiagramm fließen nur Inhalte mit einer vollständigen, gültigen Taxonomiezuordnung ein. Die Zahl „Ohne Taxonomie ausgelassen“ und der aufklappbare „Importbericht“ machen diese Abgrenzung sichtbar. Die angezeigten Mengen beschreiben die vorhandenen Inhalte; sie sind weder eine Bewertung ihrer Qualität noch ein Nachweis vollständiger Abdeckung eines Themengebiets.
 
-```sh
-python3 scripts/build_all.py --extra-catalog "/absoluter/Pfad/Kernel-mit-Taxonomie.json"
-cd app && npm run build:standalone
-```
+## Das Trendmapping verstehen
 
-Mehrere `--extra-catalog`-Argumente sind möglich. Für einen bereits vorhandenen Checkout kann stattdessen `python3 scripts/build_all.py --repo-root "/Pfad/zur/Stand-der-Technik-Bibliothek"` verwendet werden. `sync_repo.py` synchronisiert ausschließlich die öffentliche Bibliothek und überschreibt keinen fremden Nicht-Git-Ordner.
+Das Trendmapping ist eine **separate, automatisierte thematische Zuordnung** von Controls und Components zu Themen der ausgewerteten BSI-Trendanalysen. Es übernimmt die Taxonomiezuordnung des Radars nicht als Trendzuordnung. Thematische Übereinstimmungen sind Anhaltspunkte für die weitere fachliche Prüfung, keine verbindliche Aussage über Relevanz, Wirksamkeit oder Konformität.
 
-Der statische Vite-Build liegt unter `app/dist/`, die einzelne transportable HTML-Datei unter `app/dist/Stand der Technik-Radar.html`. Vorberechnete Daten werden in `data/build/` und `app/public/generated/` abgelegt. Die öffentliche Commit-ID sowie Herkunft, relative Pfade und SHA-256-Hashes der berücksichtigten OSCAL-Dateien stehen in `taxonomy-map.json`.
+Wählen Sie oben einen verfügbaren Jahrgang und anschließend eine Themenblase. Größere Blasen stehen für mehr zugeordnete Inhalte. Rechts erscheinen eine Kurzbeschreibung, die Anzahl der zugeordneten Controls und Components sowie das **Trendprofil**:
 
-## Bedienung
+- **Präsenz:** Wie viele und wie stark passende Inhalte zugeordnet sind.
+- **Tiefe:** Wie belastbar und fachlich tief die Zuordnungen sind.
+- **Breite:** Wie viele Teilaspekte des Trends durch Inhalte gestützt werden.
+- **Abdeckung:** Zusammenfassende Sicht auf Präsenz, Tiefe und Breite.
 
-Das Kreisdiagramm und die Trend-Bubbles sind per Tastatur bedienbar. Eine hierarchische Listenansicht bietet dieselben Taxonomiethemen ohne SVG; auf schmalen Bildschirmen ist sie die primäre Navigation. Detailtabellen lassen sich nach Text und Quellenart filtern und sind seitenweise begrenzt. Radar-Auswahl und Ansicht sind über die URL-Hash-Navigation verlinkbar; Zurück/Vorwärts funktioniert im Browser. Bewegungen respektieren `prefers-reduced-motion`.
+Unter „Gemappte Inhalte“ sehen Sie die einzelnen Treffer mit Zuordnungswerten. Die Kennzahlen „Strong“, „Medium“ und „Weak“ fassen die Stärke der automatischen Zuordnungen zusammen. Ein Prozentwert in der Treffertabelle ist ein **Zuordnungswert**, keine Wahrscheinlichkeit und keine Compliance-Bewertung. Die Tabelle zeigt pro Inhaltstyp höchstens 80 Treffer an; die Kennzahlen beziehen sich auf alle zugeordneten Inhalte.
 
-## Qualitätssicherung
+## Datenstand und Herkunft
 
-```sh
-python3 -m pytest -q
-cd app && npm run build
-```
+Der Datenstand und die verwendete Version der öffentlichen Bibliothek stehen oben in der Radar-Ansicht. Im „Importbericht“ können Sie nachsehen, welche Quelldateien berücksichtigt wurden und wie viele ihrer Inhalte eine Taxonomiezuordnung haben. Je nach Datenstand können zusätzlich bereitgestellte Kataloge enthalten sein; diese sind als „Zusatzkatalog“ gekennzeichnet.
 
-Die Tests decken insbesondere kontextabhängige Mehrfachzuordnungen, die manuelle Katalogkopie, fehlende Taxonomie und ungültige Pfade ab.
+Das Radar ist eine Orientierungshilfe für die Recherche. Für die fachliche Bewertung eines Controls oder einer Component sollten Sie den vollständigen Inhalt und seine Quellen im jeweiligen Katalog beziehungsweise in der Component Definition lesen.
