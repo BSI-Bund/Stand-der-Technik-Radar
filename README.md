@@ -21,9 +21,9 @@ Mit der Segmentsuche finden Sie Themen im Kreisdiagramm. Die Schaltflächen „+
 
 ### Was die Zahlen bedeuten
 
-Das Radar zählt **Vorkommen in Quelldateien**, nicht weltweit eindeutige Maßnahmen. Derselbe Control kann in mehreren Katalogen stehen und je nach Kontext unterschiedlichen Taxonomiethemen zugeordnet sein. Solche Vorkommen bleiben getrennt sichtbar. Die Kennzahl „Eindeutige Identitäten“ zeigt zusätzlich, wie viele verschiedene Controls und Components dahinterstehen.
+Die drei Übersichtskarten zeigen die Anzahl der **Controls**, der **Components** und der **Produkt- und Servicegruppen mit Treffern** im Radar. Gezählt werden Treffer pro Quelldatei: Derselbe Control kann in mehreren Katalogen stehen und je nach Kontext unterschiedlichen Themen zugeordnet sein. Solche Treffer bleiben getrennt sichtbar.
 
-In das Kreisdiagramm fließen nur Inhalte mit einer vollständigen, gültigen Taxonomiezuordnung ein. Die Zahl „Ohne Taxonomie ausgelassen“ und der aufklappbare „Importbericht“ machen diese Abgrenzung sichtbar. Die angezeigten Mengen beschreiben die vorhandenen Inhalte; sie sind weder eine Bewertung ihrer Qualität noch ein Nachweis vollständiger Abdeckung eines Themengebiets.
+Die angezeigten Mengen beschreiben die im Radar dargestellten Inhalte. Sie sind weder eine Bewertung ihrer Qualität noch ein Nachweis vollständiger Abdeckung eines Themengebiets.
 
 ## Das Trendmapping verstehen
 
@@ -40,6 +40,6 @@ Unter „Gemappte Inhalte“ sehen Sie die einzelnen Treffer mit Zuordnungswerte
 
 ## Datenstand und Herkunft
 
-Der Datenstand und die verwendete Version der öffentlichen Bibliothek stehen oben in der Radar-Ansicht. Im „Importbericht“ können Sie nachsehen, welche Quelldateien berücksichtigt wurden und wie viele ihrer Inhalte eine Taxonomiezuordnung haben. Je nach Datenstand können zusätzlich bereitgestellte Kataloge enthalten sein; diese sind als „Zusatzkatalog“ gekennzeichnet.
+Der Datenstand steht oben in der Radar-Ansicht. In den Detailtabellen sehen Sie die Herkunft jedes Treffers; bei öffentlich verfügbaren Quelldateien können Sie die Quelle direkt öffnen. Je nach Datenstand können zusätzlich bereitgestellte Kataloge enthalten sein; diese sind als „Zusatzkatalog“ gekennzeichnet.
 
 Das Radar ist eine Orientierungshilfe für die Recherche. Für die fachliche Bewertung eines Controls oder einer Component sollten Sie den vollständigen Inhalt und seine Quellen im jeweiligen Katalog beziehungsweise in der Component Definition lesen.
