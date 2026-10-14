@@ -1,0 +1,116 @@
+.details-panel {
+  margin-top: 32px;
+}
+.selected-summary {
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+}
+.selected-summary p {
+  color: var(--dim);
+  max-width: 80ch;
+}
+.eyebrow-small {
+  font-size: 14px;
+  color: var(--dim);
+  margin-bottom: 4px;
+}
+.summary-counts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  align-content: start;
+  white-space: nowrap;
+  font-size: 14px;
+}
+.detail-section {
+  margin-top: 24px;
+}
+.detail-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+.detail-heading span {
+  color: var(--dim);
+  font-size: 14px;
+}
+.mapping-filters {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(200px, 280px);
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.mapping-filters label {
+  font-size: 14px;
+  font-weight: 500;
+}
+.mapping-filters input,
+.mapping-filters select {
+  display: block;
+  margin-top: 6px;
+}
+.table-wrap,
+.trend-table-section {
+  overflow-x: auto;
+  max-width: 100%;
+}
+.kern-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  font-size: 14px;
+  color: var(--text);
+  background: var(--bg);
+}
+.kern-table th {
+  text-align: left;
+  background: var(--panel);
+  font-weight: 600;
+}
+.kern-table td,
+.kern-table th {
+  padding: 12px;
+  vertical-align: top;
+  border-bottom: 1px solid var(--border);
+}
+.kern-table td {
+  overflow-wrap: anywhere;
+  min-width: 140px;
+  max-width: 420px;
+}
+.kern-table tbody tr:hover {
+  background: var(--accent-soft);
+}
+.source-kind,
+.source-path,
+.multi-path-note {
+  color: var(--dim);
+  font-size: 13px;
+}
+.multi-path-note {
+  margin-top: 8px;
+}
+.uuid-cell {
+  font-family: ui-monospace, monospace;
+  font-size: 12px;
+}
+.table-pages {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+@media (max-width: 800px) {
+  .selected-summary {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .mapping-filters {
+    grid-template-columns: 1fr;
+  }
+}

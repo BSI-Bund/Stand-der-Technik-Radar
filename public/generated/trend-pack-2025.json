@@ -1,0 +1,742 @@
+{
+  "schema_version": "1.0.0",
+  "year": 2025,
+  "label": "BSI Trendanalyse 2025",
+  "status": "active",
+  "source": {
+    "type": "pdf",
+    "title": "BSI Trendanalyse 2025",
+    "file": "data/source/trends/2025/raw/20251217_Auswertung_TA_2025.pdf",
+    "extracted_from": "data/source/trends/2025/extracted/trendanalyse_2025.summary.json"
+  },
+  "display": {
+    "theme_color": "#5B8DEF",
+    "sort_order": 2025,
+    "enabled": true,
+    "grouping_mode": "ui_focus_groups"
+  },
+  "clusters": [
+    {
+      "id": "2025-ai",
+      "label": "Künstliche Intelligenz",
+      "short_label": "KI",
+      "description": "KI-bezogene Chancen, Risiken und Sicherheitsthemen.",
+      "color": "#8B5CF6",
+      "order": 1,
+      "map_position": {
+        "x": 520,
+        "y": 120
+      }
+    },
+    {
+      "id": "2025-sovereignty",
+      "label": "Digitale Souveränität & Unabhängigkeit",
+      "short_label": "Souveränität",
+      "description": "Souveränität, Open Source und Schutz sensibler Daten in Nutzung.",
+      "color": "#10B981",
+      "order": 2,
+      "map_position": {
+        "x": 200,
+        "y": 300
+      }
+    },
+    {
+      "id": "2025-cloud",
+      "label": "Cloud",
+      "short_label": "Cloud",
+      "description": "Cloud, europäische Alternativen und Plattformabhängigkeiten.",
+      "color": "#3B82F6",
+      "order": 3,
+      "map_position": {
+        "x": 220,
+        "y": 560
+      }
+    },
+    {
+      "id": "2025-identity-admin",
+      "label": "Digitale Verwaltung & Identitäten",
+      "short_label": "Identitäten",
+      "description": "Digitale Verwaltung, eID, Wallets und sensible Nachweise.",
+      "color": "#06B6D4",
+      "order": 4,
+      "map_position": {
+        "x": 820,
+        "y": 300
+      }
+    },
+    {
+      "id": "2025-sec-solutions",
+      "label": "Digitale Sicherheitslösungen",
+      "short_label": "Sicherheitslösungen",
+      "description": "Qualitäts- und Engineering-Themen rund um sichere Software.",
+      "color": "#F59E0B",
+      "order": 5,
+      "map_position": {
+        "x": 820,
+        "y": 560
+      }
+    }
+  ],
+  "themes": [
+    {
+      "id": "2025-ai-mcp",
+      "cluster_id": "2025-ai",
+      "label": "MCP",
+      "short_label": "MCP",
+      "description": "Sicherheitsfragen rund um Model Context Protocol und Agentic AI.",
+      "management_summary": "MCP erweitert Tool- und Datenzugriffe von KI-Systemen und schafft neue Risiken bei Authentisierung, Datenschutz und Missbrauch.",
+      "aliases": [
+        "Model Context Protocol",
+        "agentic AI"
+      ],
+      "keywords": [
+        "mcp",
+        "model context protocol",
+        "agentic ai",
+        "prompt injection",
+        "tool access",
+        "llm"
+      ],
+      "negative_keywords": [],
+      "signals": {
+        "tag_hints": [
+          "ki",
+          "anwendung",
+          "schnittstelle"
+        ],
+        "target_object_hints": [
+          "anwendung",
+          "schnittstelle",
+          "plattform"
+        ]
+      },
+      "color": "#A855F7",
+      "order": 1,
+      "enabled": true,
+      "map_position": {
+        "x": 500,
+        "y": 210
+      },
+      "facets": [
+        {
+          "id": "protocol_security",
+          "label": "Protokollsicherheit",
+          "description": "Sicherheit des Protokolls und seiner Implementierungen.",
+          "weight": 1.0
+        },
+        {
+          "id": "authz_authn",
+          "label": "Authentisierung & Autorisierung",
+          "description": "Absicherung von Zugriffen und Rechten.",
+          "weight": 1.0
+        },
+        {
+          "id": "data_exfiltration",
+          "label": "Datenabfluss",
+          "description": "Risiken von Kontext- und Datenabfluss.",
+          "weight": 1.0
+        },
+        {
+          "id": "prompt_injection",
+          "label": "Prompt Injection & Tool-Missbrauch",
+          "description": "Missbrauch externer Tools und Prompt-Angriffe.",
+          "weight": 1.0
+        },
+        {
+          "id": "governance",
+          "label": "Governance",
+          "description": "Sichere Integration und Leitplanken.",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "id": "2025-ai-vibe-coding",
+      "cluster_id": "2025-ai",
+      "label": "Vibe Coding",
+      "short_label": "Vibe Coding",
+      "description": "Codegenerierung mit LLMs und die damit verbundenen Chancen und Sicherheitsrisiken.",
+      "management_summary": "LLM-gestützte Codeerzeugung beschleunigt Entwicklung, erhöht aber Risiken durch unsicheren Code, Prompt-Manipulation und Datenabfluss.",
+      "aliases": [
+        "KI-generierter Code",
+        "LLM coding"
+      ],
+      "keywords": [
+        "vibe coding",
+        "codegenerierung",
+        "llm",
+        "unsicherer code",
+        "prompt injection",
+        "softwareentwicklung"
+      ],
+      "negative_keywords": [],
+      "signals": {
+        "tag_hints": [
+          "entwicklung",
+          "software",
+          "ki"
+        ],
+        "target_object_hints": [
+          "anwendung",
+          "codebasis",
+          "repository"
+        ]
+      },
+      "color": "#9333EA",
+      "order": 2,
+      "enabled": true,
+      "map_position": {
+        "x": 600,
+        "y": 230
+      },
+      "facets": [
+        {
+          "id": "code_quality",
+          "label": "Codequalität",
+          "description": "Sichere und nachvollziehbare Codeerzeugung.",
+          "weight": 1.0
+        },
+        {
+          "id": "prompt_manipulation",
+          "label": "Prompt-Manipulation",
+          "description": "Manipulation der Eingaben und Ziele.",
+          "weight": 1.0
+        },
+        {
+          "id": "data_hoheit",
+          "label": "Code- und Datenhoheit",
+          "description": "Schutz vertraulicher Informationen.",
+          "weight": 1.0
+        },
+        {
+          "id": "reviewability",
+          "label": "Reviewbarkeit",
+          "description": "Prüfbarkeit und Oversight generierten Codes.",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "id": "2025-cloud-eu-alternatives",
+      "cluster_id": "2025-cloud",
+      "label": "Europäische Alternativen",
+      "short_label": "EU-Cloud",
+      "description": "Europäische Alternativen im Cloud-Markt zur Reduktion strategischer Abhängigkeiten.",
+      "management_summary": "Europäische Cloud-Alternativen sollen Abhängigkeiten reduzieren und Sicherheitsinteressen besser absichern.",
+      "aliases": [
+        "europäische cloud",
+        "gaia-x",
+        "self hosting"
+      ],
+      "keywords": [
+        "europäische alternativen",
+        "eu cloud",
+        "self hosting",
+        "cloud act",
+        "gaia-x",
+        "scaleway",
+        "ovhcloud"
+      ],
+      "negative_keywords": [],
+      "signals": {
+        "tag_hints": [
+          "cloud",
+          "souveränität",
+          "plattform"
+        ],
+        "target_object_hints": [
+          "plattform",
+          "service",
+          "infrastruktur"
+        ]
+      },
+      "color": "#2563EB",
+      "order": 3,
+      "enabled": true,
+      "map_position": {
+        "x": 230,
+        "y": 650
+      },
+      "facets": [
+        {
+          "id": "vendor_dependency",
+          "label": "Herstellerabhängigkeit",
+          "description": "Reduktion von Lock-in und Fremdrechtsabhängigkeiten.",
+          "weight": 1.0
+        },
+        {
+          "id": "eu_compliance",
+          "label": "EU-Rechtsraum",
+          "description": "Rechtlicher Schutz sensibler Daten.",
+          "weight": 1.0
+        },
+        {
+          "id": "self_hosting",
+          "label": "Self Hosting / Exit",
+          "description": "Wechselbarkeit und Exit-Strategien.",
+          "weight": 1.0
+        },
+        {
+          "id": "trust_transparency",
+          "label": "Transparenz & Vertrauen",
+          "description": "Transparenz als Vertrauensgrundlage.",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "id": "2025-sovereignty-confidential-computing",
+      "cluster_id": "2025-sovereignty",
+      "label": "Confidential Computing",
+      "short_label": "Confidential Computing",
+      "description": "Schutz sensibler Daten auch während der Verarbeitung durch hardwaregestützte Vertrauensanker.",
+      "management_summary": "Confidential Computing adressiert Datenzugriff in fremden Infrastrukturen und stärkt digitale Souveränität.",
+      "aliases": [
+        "TEE",
+        "Trusted Execution Environments"
+      ],
+      "keywords": [
+        "confidential computing",
+        "tee",
+        "trusted execution environment",
+        "daten in nutzung",
+        "cloud act"
+      ],
+      "negative_keywords": [],
+      "signals": {
+        "tag_hints": [
+          "cloud",
+          "souveränität",
+          "daten"
+        ],
+        "target_object_hints": [
+          "plattform",
+          "infrastruktur",
+          "anwendung"
+        ]
+      },
+      "color": "#10B981",
+      "order": 4,
+      "enabled": true,
+      "map_position": {
+        "x": 180,
+        "y": 390
+      },
+      "facets": [
+        {
+          "id": "data_in_use",
+          "label": "Schutz sensibler Daten in Nutzung",
+          "description": "Schutz während der Verarbeitung.",
+          "weight": 1.0
+        },
+        {
+          "id": "trust_anchor",
+          "label": "Vertrauensanker",
+          "description": "Hardwarebasierte Vertrauensanker und Ausführungsumgebungen.",
+          "weight": 1.0
+        },
+        {
+          "id": "sovereignty",
+          "label": "Souveränität",
+          "description": "Reduktion von Abhängigkeiten und Zugriffen Dritter.",
+          "weight": 1.0
+        },
+        {
+          "id": "standards",
+          "label": "Standards & Compliance",
+          "description": "Einhaltung europäischer Schutzanforderungen.",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "id": "2025-sovereignty-open-source",
+      "cluster_id": "2025-sovereignty",
+      "label": "Förderung sicherer Open Source",
+      "short_label": "Sichere Open Source",
+      "description": "Open Source als Hebel für Transparenz, Resilienz und digitale Souveränität.",
+      "management_summary": "Sichere Open Source stärkt Transparenz und Unabhängigkeit, braucht aber reifes Sicherheitsmanagement.",
+      "aliases": [
+        "Open Source",
+        "sichere Open Source"
+      ],
+      "keywords": [
+        "open source",
+        "sbom",
+        "code review",
+        "fork",
+        "security by design",
+        "zertifizierung"
+      ],
+      "negative_keywords": [],
+      "signals": {
+        "tag_hints": [
+          "software",
+          "supply chain",
+          "entwicklung"
+        ],
+        "target_object_hints": [
+          "anwendung",
+          "codebasis",
+          "komponente"
+        ]
+      },
+      "color": "#14B8A6",
+      "order": 5,
+      "enabled": true,
+      "map_position": {
+        "x": 290,
+        "y": 420
+      },
+      "facets": [
+        {
+          "id": "transparency",
+          "label": "Transparenz",
+          "description": "Transparenz des Quellcodes und der Lieferkette.",
+          "weight": 1.0
+        },
+        {
+          "id": "security_practices",
+          "label": "Security-by-Design",
+          "description": "Reviews, SBOMs und sichere Entwicklung.",
+          "weight": 1.0
+        },
+        {
+          "id": "resilience",
+          "label": "Resilienz",
+          "description": "Unabhängigkeit, Forks und langfristige Wartbarkeit.",
+          "weight": 1.0
+        },
+        {
+          "id": "standards",
+          "label": "Standards",
+          "description": "Zertifizierungen und Verlässlichkeit.",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "id": "2025-identity-eid",
+      "cluster_id": "2025-identity-admin",
+      "label": "eID",
+      "short_label": "eID",
+      "description": "Elektronische Identitäten als kritische Vertrauensinfrastruktur für Verwaltung und weitere Dienste.",
+      "management_summary": "Elektronische Identitäten verbinden hohe Nutzbarkeit mit hohen Anforderungen an Schutz, Integrität und Missbrauchsresistenz.",
+      "aliases": [
+        "elektronische identität",
+        "digital identity",
+        "eidas"
+      ],
+      "keywords": [
+        "eid",
+        "elektronische identität",
+        "identität",
+        "eidas",
+        "authentifizierung",
+        "biometrie"
+      ],
+      "negative_keywords": [],
+      "signals": {
+        "tag_hints": [
+          "identität",
+          "authentisierung",
+          "verwaltung"
+        ],
+        "target_object_hints": [
+          "identität",
+          "anwendung",
+          "endgerät"
+        ]
+      },
+      "color": "#0891B2",
+      "order": 6,
+      "enabled": true,
+      "map_position": {
+        "x": 810,
+        "y": 360
+      },
+      "facets": [
+        {
+          "id": "identity_protection",
+          "label": "Identitätsschutz",
+          "description": "Schutz gegen Missbrauch und Kompromittierung.",
+          "weight": 1.0
+        },
+        {
+          "id": "deepfake_resistance",
+          "label": "Deepfake-Resistenz",
+          "description": "Widerstand gegen KI-gestützte Täuschung.",
+          "weight": 1.0
+        },
+        {
+          "id": "centralization_risk",
+          "label": "Zentralisierungsrisiken",
+          "description": "Risiken großer Identitätsbestände.",
+          "weight": 1.0
+        },
+        {
+          "id": "service_integration",
+          "label": "Dienstintegration",
+          "description": "Einbindung in öffentliche und private Dienste.",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "id": "2025-identity-wallet",
+      "cluster_id": "2025-identity-admin",
+      "label": "Wallet",
+      "short_label": "Wallet",
+      "description": "Digitale Wallets für sensible Nachweise, Identitäten und Gesundheitsdaten.",
+      "management_summary": "Wallets schaffen nutzernahe Vertrauensdienste, aber auch Integrations-, Endpoint- und Supply-Chain-Risiken.",
+      "aliases": [
+        "digitale wallet",
+        "eudi wallet"
+      ],
+      "keywords": [
+        "wallet",
+        "eudi",
+        "credential",
+        "nachweis",
+        "mobil",
+        "gesundheitsdaten",
+        "app"
+      ],
+      "negative_keywords": [],
+      "signals": {
+        "tag_hints": [
+          "wallet",
+          "identität",
+          "mobil"
+        ],
+        "target_object_hints": [
+          "endgerät",
+          "identität",
+          "anwendung"
+        ]
+      },
+      "color": "#06B6D4",
+      "order": 7,
+      "enabled": true,
+      "map_position": {
+        "x": 880,
+        "y": 430
+      },
+      "facets": [
+        {
+          "id": "credential_integrity",
+          "label": "Nachweisintegrität",
+          "description": "Integrität und Echtheit von Nachweisen.",
+          "weight": 1.0
+        },
+        {
+          "id": "endpoint_security",
+          "label": "Endpoint-Sicherheit",
+          "description": "Sicherheit mobiler Endgeräte.",
+          "weight": 1.0
+        },
+        {
+          "id": "supply_chain",
+          "label": "Integrationsrisiken",
+          "description": "Risiken aus Backend-, App- und Plattformintegrationen.",
+          "weight": 1.0
+        },
+        {
+          "id": "data_sovereignty",
+          "label": "Datenhoheit",
+          "description": "Kontrolle über Daten und Backends.",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "id": "2025-security-software-quality",
+      "cluster_id": "2025-sec-solutions",
+      "label": "Softwarequalität",
+      "short_label": "Softwarequalität",
+      "description": "Sichere Softwareentwicklung und belastbare Qualitätspraktiken.",
+      "management_summary": "Softwarequalität ist eine Grundlage für belastbare digitale Sicherheitslösungen und reduziert strukturelle Schwächen.",
+      "aliases": [
+        "secure software quality"
+      ],
+      "keywords": [
+        "softwarequalität",
+        "secure software",
+        "qualität",
+        "review",
+        "engineering"
+      ],
+      "negative_keywords": [],
+      "signals": {
+        "tag_hints": [
+          "software",
+          "entwicklung",
+          "qualität"
+        ],
+        "target_object_hints": [
+          "anwendung",
+          "codebasis"
+        ]
+      },
+      "color": "#F59E0B",
+      "order": 8,
+      "enabled": true,
+      "map_position": {
+        "x": 720,
+        "y": 640
+      },
+      "facets": [
+        {
+          "id": "engineering",
+          "label": "Engineering",
+          "description": "Belastbare Entwicklungspraktiken.",
+          "weight": 1.0
+        },
+        {
+          "id": "assurance",
+          "label": "Assurance",
+          "description": "Prüf- und Nachweisfähigkeit.",
+          "weight": 1.0
+        },
+        {
+          "id": "maintainability",
+          "label": "Wartbarkeit",
+          "description": "Nachhaltige Qualität und Pflege.",
+          "weight": 1.0
+        },
+        {
+          "id": "defect_reduction",
+          "label": "Fehlerreduktion",
+          "description": "Vermeidung struktureller Fehler.",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "id": "2025-security-formal-verification",
+      "cluster_id": "2025-sec-solutions",
+      "label": "Formale Verifikation",
+      "short_label": "Verifikation",
+      "description": "Formale Verfahren zur Absicherung sicherheitskritischer Software und Systeme.",
+      "management_summary": "Formale Verifikation erhöht Prüfbarkeit und Vertrauensniveau, ist aber noch nicht breit etabliert.",
+      "aliases": [
+        "formal verification"
+      ],
+      "keywords": [
+        "formale verifikation",
+        "formal verification",
+        "mathematischer nachweis",
+        "sicherheitskritisch"
+      ],
+      "negative_keywords": [],
+      "signals": {
+        "tag_hints": [
+          "software",
+          "prüfung",
+          "assurance"
+        ],
+        "target_object_hints": [
+          "anwendung",
+          "komponente"
+        ]
+      },
+      "color": "#FBBF24",
+      "order": 9,
+      "enabled": true,
+      "map_position": {
+        "x": 810,
+        "y": 700
+      },
+      "facets": [
+        {
+          "id": "proof",
+          "label": "Nachweis",
+          "description": "Formale Nachweise und Modelle.",
+          "weight": 1.0
+        },
+        {
+          "id": "criticality",
+          "label": "Kritikalität",
+          "description": "Einsatz in kritischen Systemen.",
+          "weight": 1.0
+        },
+        {
+          "id": "tooling",
+          "label": "Werkzeuge",
+          "description": "Tooling und methodische Einbettung.",
+          "weight": 1.0
+        },
+        {
+          "id": "adoption",
+          "label": "Einführung",
+          "description": "Praktische Nutzbarkeit und Einführung.",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "id": "2025-security-low-no-code",
+      "cluster_id": "2025-sec-solutions",
+      "label": "Low Code & No Code Solutions",
+      "short_label": "Low-/No-Code",
+      "description": "Sicherheitsfragen rund um Low-Code- und No-Code-Ansätze.",
+      "management_summary": "Low-/No-Code erhöht Geschwindigkeit und Zugänglichkeit, bringt aber Governance- und Qualitätsrisiken mit sich.",
+      "aliases": [
+        "low code",
+        "no code"
+      ],
+      "keywords": [
+        "low code",
+        "no code",
+        "automatisiertes incident management",
+        "plattform",
+        "schnelle entwicklung"
+      ],
+      "negative_keywords": [],
+      "signals": {
+        "tag_hints": [
+          "entwicklung",
+          "plattform",
+          "automatisierung"
+        ],
+        "target_object_hints": [
+          "plattform",
+          "anwendung"
+        ]
+      },
+      "color": "#F59E0B",
+      "order": 10,
+      "enabled": true,
+      "map_position": {
+        "x": 910,
+        "y": 620
+      },
+      "facets": [
+        {
+          "id": "governance",
+          "label": "Governance",
+          "description": "Steuerung und Freigaben.",
+          "weight": 1.0
+        },
+        {
+          "id": "security_quality",
+          "label": "Sicherheitsqualität",
+          "description": "Sicherheit generierter oder konfigurativ erstellter Lösungen.",
+          "weight": 1.0
+        },
+        {
+          "id": "platform_risk",
+          "label": "Plattformrisiken",
+          "description": "Abhängigkeiten und Plattformschwächen.",
+          "weight": 1.0
+        },
+        {
+          "id": "operationalization",
+          "label": "Betriebliche Einführung",
+          "description": "Sichere Einführung in bestehende Prozesse.",
+          "weight": 1.0
+        }
+      ]
+    }
+  ]
+}

@@ -1,45 +1,63 @@
 # Stand der Technik-Radar
 
-Das Stand der Technik-Radar ist eine interaktive Übersicht über Inhalte der [Stand-der-Technik-Bibliothek](https://github.com/BSI-Bund/Stand-der-Technik-Bibliothek). Es verbindet zwei unterschiedliche Perspektiven: Das **Radar** ordnet Controls und Components in eine vierstufige Taxonomie ein. Das **Trendmapping** zeigt, welche Inhalte thematisch zu ausgewerteten BSI-Trendanalysen passen.
+Das Radar macht Controls und Components der [Stand der Technik-Bibliothek](https://github.com/BSI-Bund/Stand-der-Technik-Bibliothek) entlang ihrer Taxonomie und in Bezug auf BSI-Trendanalysen erkundbar.
 
-Zur Nutzung öffnen Sie die bereitgestellte Radar-Seite oder Einzel-HTML-Datei in einem aktuellen Browser. Wechseln Sie oben zwischen „Stand der Technik-Radar“ und „Trendmapping“. Die Ansichten lassen sich auch mit der Tastatur bedienen.
+**[Radar öffnen](https://bsi-bund.github.io/Stand-der-Technik-Radar/)** · [Bedienung](docs/user-guide.md) · [Entwicklung](CONTRIBUTING.md) · [Architektur](docs/architecture.md) · [Betrieb und GitHub Pages](docs/deployment.md)
 
-## Das Radar verstehen
+Die Oberfläche basiert auf **KERN UX 2.8.2** mit lokal ausgelieferter Fira Sans. Kopfbereich, Navigation, Formulare, Tabellen und Fokusdarstellung orientieren sich am [Stand der Technik-Viewer](https://bsi-community.github.io/Stand-der-Technik-Viewer/).
 
-Die Taxonomie umfasst vier Ebenen:
+## Ansichten
 
-1. NIST-Funktion
-2. Technologiedomäne
-3. Produktkategorie
-4. Produkt- oder Servicegruppe
+- **Radar:** Controls und Components entlang von NIST-Funktion, Technologiedomäne, Produktkategorie und Produkt-/Servicegruppe finden. Kreisdiagramm und Themenliste bieten alternative Zugänge; Detailtabellen enthalten Suchfelder, Herkunft und Quellenlinks.
+- **Trendmapping:** Einen Jahrgang und ein Thema wählen, zugeordnete Inhalte und das Trendprofil mit Präsenz, Tiefe, Breite und Abdeckung ansehen. Die Themenauswahl funktioniert auch ohne Bedienung des Diagramms.
 
-Die Zuordnung stammt aus den Taxonomieangaben der jeweiligen Controls und Components; das Radar ermittelt sie nicht selbst. Ein **Control** beschreibt eine Anforderung oder Maßnahme. Eine **Component** beschreibt ein Umsetzungsobjekt in einer Component Definition.
+Beim Öffnen der Radar-Ansicht wird die öffentliche Bibliothek automatisch auf neue Veröffentlichungen geprüft. Neue und geänderte Quelldateien werden eingelesen; bei unverändertem Stand genügt eine Revisionsabfrage. Der Browser hält einen lokalen Cache vor. Aktualisierungsstatus und Quellstand sind sichtbar; bei einem Fehler bleibt der letzte verfügbare Stand ausdrücklich als Rückfallstand erkennbar. Das Trendmapping wird weiterhin redaktionell aktualisiert. Details: [Automatischer Bibliotheksabruf](docs/live-library.md).
 
-In der Gesamtansicht sehen Sie zunächst NIST-Funktionen und Technologiedomänen. Wählen Sie ein Segment aus, um in die tieferen Ebenen zu wechseln und die Unterthemen zu erkunden. Unterhalb des Diagramms erscheinen die zugeordneten Controls und Components mit Titel, Herkunft und vollständigem Taxonomiepfad. Die „Taxonomie als Liste“ bietet dieselben Themen ohne Kreisdiagramm und ist besonders auf schmalen Bildschirmen hilfreich.
+Die Taxonomie stammt aus den OSCAL-Properties der Quellen. Das Trendmapping ist eine separate automatische thematische Zuordnung. Die Werte sind **keine Wahrscheinlichkeiten, Qualitätsurteile oder Konformitätsnachweise**. Ein Control kann in mehreren Quelldateien vorkommen; solche Vorkommen werden getrennt dargestellt.
 
-Mit der Segmentsuche finden Sie Themen im Kreisdiagramm. Die Schaltflächen „+“ und „−“ verändern die Ansicht; „Zur Übersicht“ führt zur Gesamtansicht zurück. In den Detailtabellen können Sie nach ID, Titel, Quelle oder Taxonomie suchen und zwischen dem öffentlichen Repository und gegebenenfalls ergänzten Katalogen filtern. Bei öffentlich verfügbaren Quelldateien führt ein Link direkt zur Quelle. Die Browser-Navigation „Zurück“ und „Vorwärts“ funktioniert auch nach einer Themenauswahl.
+## Inhalte richtig lesen
 
-### Was die Zahlen bedeuten
+Ein Control beschreibt eine Anforderung oder Maßnahme, eine Component ein Umsetzungsobjekt. Gezählt werden Vorkommen je Quelldatei, nicht ausschließlich eindeutige fachliche Identitäten. Das Trendprofil unterscheidet Präsenz (Anzahl und Stärke der Treffer), Tiefe (fachliche Ausprägung), Breite (berührte Teilaspekte) und Abdeckung (zusammenfassender Wert). Diese Orientierung ersetzt keine Prüfung der vollständigen OSCAL-Quelle.
 
-Die drei Übersichtskarten zeigen die Anzahl der **Controls**, der **Components** und der **Produkt- und Servicegruppen mit Treffern** im Radar. Gezählt werden Treffer pro Quelldatei: Derselbe Control kann in mehreren Katalogen stehen und je nach Kontext unterschiedlichen Themen zugeordnet sein. Solche Treffer bleiben getrennt sichtbar.
+Die Anleitung führt die nützlichen fachlichen Erläuterungen der bisherigen öffentlichen README fort. Bedienung, Seitennavigation und Hosting wurden auf die neue Anwendung angepasst; die frühere Begrenzung auf 80 Trendtreffer entfällt.
 
-Die angezeigten Mengen beschreiben die im Radar dargestellten Inhalte. Sie sind weder eine Bewertung ihrer Qualität noch ein Nachweis vollständiger Abdeckung eines Themengebiets.
+## Vorübergehender Kernel-Zusatzkatalog
 
-## Das Trendmapping verstehen
+Bis die öffentliche Bibliothek ausreichend taxonomisierte Inhalte enthält, ergänzt der lokal erstellte Kernel die Radar-Ansicht. Seine Einträge sind als **Zusatzkatalog** gekennzeichnet und über den Herkunftsfilter auswählbar. Die öffentliche Bibliothek wird weiterhin automatisch aktualisiert. Der Zusatzkatalog wird getrennt versioniert und kann später gezielt deaktiviert werden; siehe [Zusatzkatalog pflegen oder entfernen](docs/supplemental-catalogs.md). Das Trendmapping bleibt separat gepflegt.
 
-Das Trendmapping ist eine **separate, automatisierte thematische Zuordnung** von Controls und Components zu Themen der ausgewerteten BSI-Trendanalysen. Es übernimmt die Taxonomiezuordnung des Radars nicht als Trendzuordnung. Thematische Übereinstimmungen sind Anhaltspunkte für die weitere fachliche Prüfung, keine verbindliche Aussage über Relevanz, Wirksamkeit oder Konformität.
+## Übernahme in das öffentliche Repository
 
-Wählen Sie oben einen verfügbaren Jahrgang und anschließend eine Themenblase. Größere Blasen stehen für mehr zugeordnete Inhalte. Rechts erscheinen eine Kurzbeschreibung, die Anzahl der zugeordneten Controls und Components sowie das **Trendprofil**:
+Dieses Projekt ist für [BSI-Bund/Stand-der-Technik-Radar](https://github.com/BSI-Bund/Stand-der-Technik-Radar) vorbereitet und wird nach der Übernahme dort weiterentwickelt. Die [kurze Migrationscheckliste](docs/migration-checklist.md) beschreibt das Kopieren einschließlich `.github/`, das Entfernen der alten Einzel-HTML und die einmalige Pages-Einstellung **GitHub Actions**. Danach veröffentlicht jeder erfolgreich geprüfte Push nach `main` die neue Website automatisch. Das Kopieren allein ersetzt die Repository-Einstellung nicht.
 
-- **Präsenz:** Wie viele und wie stark passende Inhalte zugeordnet sind.
-- **Tiefe:** Wie belastbar und fachlich tief die Zuordnungen sind.
-- **Breite:** Wie viele Teilaspekte des Trends durch Inhalte gestützt werden.
-- **Abdeckung:** Zusammenfassende Sicht auf Präsenz, Tiefe und Breite.
+## Lokal starten
 
-Unter „Gemappte Inhalte“ sehen Sie die einzelnen Treffer mit Zuordnungswerten. Die Kennzahlen „Strong“, „Medium“ und „Weak“ fassen die Stärke der automatischen Zuordnungen zusammen. Ein Prozentwert in der Treffertabelle ist ein **Zuordnungswert**, keine Wahrscheinlichkeit und keine Compliance-Bewertung. Die Tabelle zeigt pro Inhaltstyp höchstens 80 Treffer an; die Kennzahlen beziehen sich auf alle zugeordneten Inhalte.
+Voraussetzung: Node.js 24 LTS (siehe `.nvmrc`) und npm.
 
-## Datenstand und Herkunft
+```sh
+npm ci
+npm run dev
+```
 
-Der Datenstand steht oben in der Radar-Ansicht. In den Detailtabellen sehen Sie die Herkunft jedes Treffers; bei öffentlich verfügbaren Quelldateien können Sie die Quelle direkt öffnen. Je nach Datenstand können zusätzlich bereitgestellte Kataloge enthalten sein; diese sind als „Zusatzkatalog“ gekennzeichnet.
+Die Konsole nennt die lokale URL unter `/Stand-der-Technik-Radar/`. Die versionierten öffentlichen Daten sind enthalten; Python und ein Bibliotheksabruf sind zum Starten der Oberfläche nicht erforderlich.
 
-Das Radar ist eine Orientierungshilfe für die Recherche. Für die fachliche Bewertung eines Controls oder einer Component sollten Sie den vollständigen Inhalt und seine Quellen im jeweiligen Katalog beziehungsweise in der Component Definition lesen.
+```sh
+npm run build
+npm run preview
+```
+
+`dist/` ist die fertige statische Website. Das Radar benötigt kein Backend, keine Datenbank und keine externen Laufzeit-CDNs. JavaScript muss im Browser aktiviert sein. Ein eigenständiger Einzel-HTML-Export wird nicht mehr erzeugt; die Website wird über HTTP(S) ausgeliefert.
+
+## Projektaufbau
+
+```text
+src/             React-Oberfläche, Fachansichten, Datenzugriff und KERN-Styles
+public/generated/ freigegebener Datenstand für die Website
+scripts/         Datenaufbereitung und Build-/Veröffentlichungsprüfungen
+data/            Taxonomie, Trend-Packs und Konfiguration
+schemas/         Datenverträge
+tests/           Unit-, Python- und Browserprüfungen
+docs/            Bedienung, Architektur, Betrieb und Entscheidungen
+.github/         Prüfung und GitHub-Pages-Veröffentlichung
+```
+
+Weitere Informationen: [Datenaktualisierung](docs/data-pipeline.md), [Teststrategie](docs/testing.md), [Änderungen](CHANGELOG.md), [Drittanbieter](NOTICE.md). Die bestehende Lizenz des öffentlichen Radar-Repositorys liegt in [LICENSE.md](LICENSE.md).

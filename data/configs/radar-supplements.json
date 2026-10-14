@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0.0",
+  "catalogs": [
+    {
+      "id": "kernel-g0",
+      "enabled": true,
+      "file": "kernel-g0.json",
+      "replaces": ["control_layer/Grundschutz++/sources/catalogs/Kernel/BSI-Stand-der-Technik-Kernel-G0-catalog.json"]
+    }
+  ]
+}

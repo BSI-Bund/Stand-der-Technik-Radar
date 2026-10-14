@@ -1,0 +1,11 @@
+node_modules/
+dist/
+package-lock.json
+public/generated/
+data/
+.local/
+artifacts/
+playwright-report/
+test-results/
+.venv/
+LICENSE.md

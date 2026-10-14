@@ -1,0 +1,235 @@
+.trend-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 24px;
+}
+.trend-hero > div:first-child {
+  max-width: 85ch;
+}
+.trend-hero p {
+  display: none;
+}
+.trend-hero span {
+  color: var(--dim);
+}
+.year-switcher {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.year-button.active {
+  border-width: 2px;
+  background: var(--accent-soft);
+}
+.trend-kpis {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 32px;
+  margin: 24px 0;
+}
+.trend-kpis > span {
+  font-size: 14px;
+  color: var(--dim);
+}
+.trend-kpis strong {
+  display: block;
+  font-size: 24px;
+  color: var(--text);
+  font-weight: 600;
+}
+.trend-select {
+  display: block;
+  max-width: 600px;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+.trend-select select {
+  margin-top: 6px;
+}
+.trend-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 24px;
+  align-items: start;
+}
+.trend-map-panel,
+.trend-side-panel {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 20px;
+  min-width: 0;
+}
+.trend-map-panel {
+  position: relative;
+}
+.trend-map-panel h3 {
+  margin-bottom: 0;
+}
+.trend-map-panel > p {
+  color: var(--dim);
+  font-size: 14px;
+}
+.trend-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.trend-node {
+  cursor: pointer;
+  outline: none;
+}
+.trend-node circle {
+  stroke: var(--bg);
+  stroke-width: 2;
+}
+.trend-node.active circle,
+.trend-node:hover circle,
+.trend-node:focus-visible circle {
+  stroke: var(--accent);
+  stroke-width: 5;
+}
+.trend-node text {
+  fill: #131525;
+  font-weight: 600;
+  font-size: 14px;
+  pointer-events: none;
+}
+.trend-node .trend-node-count {
+  font-weight: 700;
+  font-size: 16px;
+}
+.trend-tooltip {
+  display: grid;
+  gap: 4px;
+}
+.trend-details {
+  display: grid;
+  gap: 24px;
+}
+.trend-radar-graph {
+  width: 260px;
+  max-width: 100%;
+  margin: 20px auto 30px;
+  position: relative;
+}
+.trend-radar-graph svg {
+  display: block;
+  width: 100%;
+}
+.trend-radar-ring {
+  fill: none;
+  stroke: var(--border);
+}
+.trend-radar-axis {
+  stroke: var(--border);
+}
+.trend-radar-area {
+  opacity: 0.3;
+  stroke-width: 2;
+}
+.trend-radar-label {
+  position: absolute;
+  font-size: 12px;
+}
+.trend-radar-label.top {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.trend-radar-label.bottom {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.trend-radar-label.left {
+  top: 50%;
+  left: -4px;
+  transform: translateY(-50%);
+}
+.trend-radar-label.right {
+  top: 50%;
+  right: -4px;
+  transform: translateY(-50%);
+}
+.score-list {
+  display: grid;
+  gap: 12px;
+}
+.score-line {
+  display: grid;
+  grid-template-columns: 80px minmax(0, 1fr) 40px;
+  gap: 8px;
+  align-items: center;
+  font-size: 13px;
+}
+.score-line > div {
+  height: 6px;
+  background: var(--panel);
+}
+.score-line i {
+  display: block;
+  height: 6px;
+}
+.score-line strong {
+  text-align: right;
+}
+.trend-summary-panel p {
+  font-size: 14px;
+  color: var(--dim);
+}
+.trend-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  font-size: 14px;
+}
+.trend-detail-grid strong {
+  display: block;
+}
+.trend-table-panel {
+  margin-top: 24px;
+}
+.trend-table-section + .trend-table-section {
+  margin-top: 24px;
+}
+.trend-table-section h4 span {
+  color: var(--dim);
+  font-weight: 400;
+}
+@media (max-width: 1000px) {
+  .trend-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .trend-details {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .trend-hero {
+    flex-direction: column;
+  }
+  .trend-details {
+    grid-template-columns: 1fr;
+  }
+  .trend-side-panel,
+  .trend-map-panel {
+    padding: 16px;
+  }
+}
+
+.profile-definitions {
+  font-size: 14px;
+  padding: 12px;
+}
+.profile-definitions dt {
+  font-weight: 600;
+}
+.profile-definitions dd {
+  margin: 4px 0 12px;
+  color: var(--dim);
+}
+.table-note {
+  font-size: 14px;
+  color: var(--dim);
+}

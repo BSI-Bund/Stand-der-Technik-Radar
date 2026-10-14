@@ -1,0 +1,1149 @@
+{
+  "name": "Stand der Technik Taxonomy",
+  "source": {
+    "file": "Technologiedomaenen-Produktkategorien-Produkttypen.xlsx",
+    "sheet": "Produktgruppen",
+    "header_row": 4,
+    "data_start_row": 5,
+    "rows": 125
+  },
+  "mapping": {
+    "Taxonomy-L1": {
+      "excel_column": "Primäre NIST-Funktion",
+      "required": true
+    },
+    "Taxonomy-L2": {
+      "excel_column": "Technologiedomäne",
+      "required": true
+    },
+    "Taxonomy-L3": {
+      "excel_column": "Produktkategorie",
+      "required": true
+    },
+    "Taxonomy-L4": {
+      "excel_column": "Produkt-/Servicegruppe",
+      "required": true
+    }
+  },
+  "valid_values": {
+    "Taxonomy-L1": [
+      "Detect",
+      "Govern",
+      "Identify",
+      "Protect",
+      "Recover",
+      "Respond"
+    ],
+    "Taxonomy-L2": [
+      "Application & DevSecOps",
+      "Asset & Exposure Management",
+      "Cloud & Container",
+      "Data & AI",
+      "Governance, Risk & Compliance",
+      "Identity & Access",
+      "Incident & Crisis Management",
+      "Monitoring & Observability",
+      "Platform & Infrastructure",
+      "Professional Services",
+      "Resilience & Recovery",
+      "Security Operations"
+    ],
+    "Taxonomy-L3": [
+      "AI Operations",
+      "AI Risk Management",
+      "AI Security",
+      "Active Detection",
+      "Application Monitoring",
+      "Application Protection",
+      "Application Risk",
+      "Application Security Testing",
+      "Asset & Exposure Management",
+      "Asset Management",
+      "Attack Mitigation",
+      "Authentication",
+      "Authentication Federation",
+      "Awareness & Training",
+      "Behavior Analytics",
+      "Cloud Crypto",
+      "Cloud Identity",
+      "Cloud Monitoring",
+      "Cloud Native Networking",
+      "Cloud Native Protection",
+      "Cloud Posture Management",
+      "Cloud Workload Protection",
+      "Compliance Monitoring",
+      "Compliance Tooling",
+      "Configuration Security",
+      "Consulting",
+      "Container Platform Security",
+      "Container Security",
+      "Credential Protection",
+      "Crisis Management",
+      "Data Lifecycle",
+      "Data Management",
+      "Data Platform Security",
+      "Data Protection",
+      "Data Resilience",
+      "Data Security Posture",
+      "DevSecOps",
+      "DevSecOps Cloud",
+      "Development Governance",
+      "Endpoint Detection",
+      "Endpoint Management",
+      "Endpoint Security",
+      "Exposure Management",
+      "Extended Detection",
+      "External Response",
+      "Forensics",
+      "Governance Analytics",
+      "Governance Tooling",
+      "IT Monitoring",
+      "Identity Governance",
+      "Identity Management",
+      "Identity Store",
+      "Implementation Service",
+      "Incident Response",
+      "Incident Response Service",
+      "Intrusion Detection",
+      "Key Management",
+      "Maintenance",
+      "Managed Detection",
+      "Managed Security Service",
+      "Network Detection",
+      "Network Monitoring",
+      "Network Protection",
+      "OT Monitoring",
+      "Platform Security",
+      "Preparedness",
+      "Privileged Access",
+      "Recovery Assurance",
+      "Recovery Automation",
+      "Recovery Technology",
+      "Remote Access",
+      "Resilience Management",
+      "Response Automation",
+      "Risk & Resilience",
+      "Risk Tooling",
+      "Runtime Protection",
+      "SOC Operations",
+      "SaaS Security",
+      "Security Analytics",
+      "Security Testing",
+      "Service Mapping",
+      "Service Monitoring",
+      "Software Integrity",
+      "Software Supply Chain",
+      "Supply Chain",
+      "Telemetry Management",
+      "Telemetry Platform",
+      "Threat Hunting",
+      "Threat Intelligence",
+      "Training",
+      "Trust Services"
+    ],
+    "Taxonomy-L4": [
+      "AI Gateway",
+      "AI Governance",
+      "API Security",
+      "Application Performance Monitoring",
+      "Application SCA",
+      "Archive & Retention",
+      "Asset Discovery",
+      "Audit Management",
+      "Awareness Services",
+      "Backup & Recovery",
+      "Breach Response",
+      "Business Continuity Management",
+      "Business Impact Analysis Tool",
+      "CAASM",
+      "CASB",
+      "CI/CD Security",
+      "CMDB",
+      "CNAPP",
+      "CSIRT as a Service",
+      "CSPM",
+      "CWPP",
+      "Cloud Infrastructure Entitlement Management",
+      "Cloud Monitoring",
+      "Cloud Secrets & Key Management",
+      "Cloud Security Consulting",
+      "Code Signing",
+      "Compliance Management",
+      "Configuration Compliance Monitoring",
+      "Container Image Scanning",
+      "Crisis Communication",
+      "Customer Identity & Access Management",
+      "DAST",
+      "DDoS Mitigation",
+      "DLP",
+      "DSPM",
+      "Data Inventory",
+      "Data Masking / Tokenization",
+      "Database Security",
+      "Deception Technology",
+      "Dependency Mapping",
+      "DevSecOps Consulting",
+      "Digital Forensics",
+      "Directory Services",
+      "Disaster Recovery",
+      "EDR",
+      "Encryption",
+      "Endpoint Protection",
+      "External Attack Surface Management",
+      "Federation / OIDC / SAML",
+      "Firewall / NGFW",
+      "GRC Consulting",
+      "GRC Platform",
+      "IAM",
+      "IAST",
+      "IDS / IPS",
+      "ISMS Tool",
+      "Identity Governance & Administration",
+      "Immutable Backup",
+      "Incident Management",
+      "Incident Response Platform",
+      "Incident Response Retainer",
+      "Incident Simulation / Tabletop",
+      "Infrastructure Monitoring",
+      "Infrastructure as Code Security",
+      "Integration Services",
+      "KMS / HSM",
+      "Kubernetes Security",
+      "LLM Guardrails",
+      "Log Management",
+      "MLOps Security",
+      "MSSP",
+      "Malware Analysis",
+      "Managed Detection & Response",
+      "Mobile Device Management",
+      "Model Security",
+      "Multi-Factor Authentication",
+      "NDR",
+      "Network Performance Monitoring",
+      "Network Security",
+      "OT Monitoring",
+      "OpenTelemetry Platform",
+      "PKI & Certificate Lifecycle",
+      "Passwordless Authentication",
+      "Patch Management",
+      "Patch Status Monitoring",
+      "Policy Management",
+      "Privacy Management",
+      "Privileged Access Management",
+      "Ransomware Recovery",
+      "Recovery Orchestration",
+      "Red Teaming / Penetration Testing",
+      "Resilience Testing",
+      "Restore Testing",
+      "Risk Management Platform",
+      "SAST",
+      "SBOM Management",
+      "SIEM",
+      "SOAR",
+      "SOC Case Management",
+      "SOC as a Service",
+      "Secrets Detection",
+      "Secrets Management",
+      "Secure Configuration Management",
+      "Secure SDLC Tooling",
+      "Security Architecture Consulting",
+      "Security Awareness Platform",
+      "Security Metrics & Reporting",
+      "Server Hardening",
+      "Service Mesh Security",
+      "Single Sign-On",
+      "Software Composition Analysis",
+      "Storage Security",
+      "Synthetic Monitoring",
+      "Takedown Services",
+      "Third-Party Risk Management",
+      "Threat Hunting Platform",
+      "Threat Intelligence Platform",
+      "Threat Modeling Tool",
+      "UEBA",
+      "VPN / ZTNA",
+      "Virtualization Security",
+      "Vulnerability Management",
+      "WAF / RASP",
+      "War Room / Collaboration",
+      "XDR"
+    ]
+  },
+  "entries": [
+    {
+      "Taxonomy-L1": "Govern",
+      "Taxonomy-L2": "Governance, Risk & Compliance",
+      "Taxonomy-L3": "Governance Tooling",
+      "Taxonomy-L4": "GRC Platform",
+      "details": "Steuert Policies, Risiken, Kontrollen und Nachweise zentral."
+    },
+    {
+      "Taxonomy-L1": "Govern",
+      "Taxonomy-L2": "Governance, Risk & Compliance",
+      "Taxonomy-L3": "Governance Tooling",
+      "Taxonomy-L4": "ISMS Tool",
+      "details": "Unterstützt ISMS-Prozesse, Scope, Verantwortlichkeiten und PDCA."
+    },
+    {
+      "Taxonomy-L1": "Govern",
+      "Taxonomy-L2": "Governance, Risk & Compliance",
+      "Taxonomy-L3": "Risk Tooling",
+      "Taxonomy-L4": "Risk Management Platform",
+      "details": "Modelliert Risiken, Schutzbedarf, Maßnahmen und Restrisiken."
+    },
+    {
+      "Taxonomy-L1": "Govern",
+      "Taxonomy-L2": "Governance, Risk & Compliance",
+      "Taxonomy-L3": "Governance Tooling",
+      "Taxonomy-L4": "Policy Management",
+      "details": "Verwaltet Leitlinien, Ausnahmen, Freigaben und Verbindlichkeit."
+    },
+    {
+      "Taxonomy-L1": "Govern",
+      "Taxonomy-L2": "Governance, Risk & Compliance",
+      "Taxonomy-L3": "Compliance Tooling",
+      "Taxonomy-L4": "Audit Management",
+      "details": "Plant und dokumentiert Audits, Findings und Abweichungen."
+    },
+    {
+      "Taxonomy-L1": "Govern",
+      "Taxonomy-L2": "Governance, Risk & Compliance",
+      "Taxonomy-L3": "Compliance Tooling",
+      "Taxonomy-L4": "Compliance Management",
+      "details": "Verknüpft Anforderungen, Nachweise und Prüfungen."
+    },
+    {
+      "Taxonomy-L1": "Govern",
+      "Taxonomy-L2": "Governance, Risk & Compliance",
+      "Taxonomy-L3": "Compliance Tooling",
+      "Taxonomy-L4": "Privacy Management",
+      "details": "Unterstützt Datenschutz, Betroffenenrechte und Datenverarbeitungstransparenz."
+    },
+    {
+      "Taxonomy-L1": "Govern",
+      "Taxonomy-L2": "Governance, Risk & Compliance",
+      "Taxonomy-L3": "Supply Chain",
+      "Taxonomy-L4": "Third-Party Risk Management",
+      "details": "Bewertet Dienstleister, Lieferketten und Kontrollnachweise."
+    },
+    {
+      "Taxonomy-L1": "Govern",
+      "Taxonomy-L2": "Governance, Risk & Compliance",
+      "Taxonomy-L3": "Governance Analytics",
+      "Taxonomy-L4": "Security Metrics & Reporting",
+      "details": "Erzeugt Kennzahlen zur Steuerung und Verbesserung."
+    },
+    {
+      "Taxonomy-L1": "Govern",
+      "Taxonomy-L2": "Governance, Risk & Compliance",
+      "Taxonomy-L3": "Awareness & Training",
+      "Taxonomy-L4": "Security Awareness Platform",
+      "details": "Schult Nutzer und dokumentiert Sensibilisierungsmaßnahmen."
+    },
+    {
+      "Taxonomy-L1": "Identify",
+      "Taxonomy-L2": "Asset & Exposure Management",
+      "Taxonomy-L3": "Asset Management",
+      "Taxonomy-L4": "Asset Discovery",
+      "details": "Ermittelt technische Assets als Grundlage für Scope, Schutzbedarf und Risiko."
+    },
+    {
+      "Taxonomy-L1": "Identify",
+      "Taxonomy-L2": "Asset & Exposure Management",
+      "Taxonomy-L3": "Asset Management",
+      "Taxonomy-L4": "CMDB",
+      "details": "Verwaltet Assets, Beziehungen und Verantwortlichkeiten."
+    },
+    {
+      "Taxonomy-L1": "Identify",
+      "Taxonomy-L2": "Asset & Exposure Management",
+      "Taxonomy-L3": "Asset & Exposure Management",
+      "Taxonomy-L4": "CAASM",
+      "details": "Konsolidiert Asset- und Exposure-Sicht über Quellen hinweg."
+    },
+    {
+      "Taxonomy-L1": "Identify",
+      "Taxonomy-L2": "Asset & Exposure Management",
+      "Taxonomy-L3": "Exposure Management",
+      "Taxonomy-L4": "External Attack Surface Management",
+      "details": "Findet externe Angriffsflächen und priorisiert Risiken."
+    },
+    {
+      "Taxonomy-L1": "Identify",
+      "Taxonomy-L2": "Asset & Exposure Management",
+      "Taxonomy-L3": "Exposure Management",
+      "Taxonomy-L4": "Vulnerability Management",
+      "details": "Erfasst, priorisiert und verfolgt Schwachstellen und Patches."
+    },
+    {
+      "Taxonomy-L1": "Identify",
+      "Taxonomy-L2": "Asset & Exposure Management",
+      "Taxonomy-L3": "Software Supply Chain",
+      "Taxonomy-L4": "Software Composition Analysis",
+      "details": "Analysiert Abhängigkeiten, Libraries, Lizenzen und bekannte Schwachstellen."
+    },
+    {
+      "Taxonomy-L1": "Identify",
+      "Taxonomy-L2": "Asset & Exposure Management",
+      "Taxonomy-L3": "Software Supply Chain",
+      "Taxonomy-L4": "SBOM Management",
+      "details": "Verwaltet Software Bill of Materials für Transparenz und Nachweise."
+    },
+    {
+      "Taxonomy-L1": "Identify",
+      "Taxonomy-L2": "Asset & Exposure Management",
+      "Taxonomy-L3": "Data Management",
+      "Taxonomy-L4": "Data Inventory",
+      "details": "Inventarisiert Datenbestände, Datenflüsse und Schutzbedarf."
+    },
+    {
+      "Taxonomy-L1": "Identify",
+      "Taxonomy-L2": "Asset & Exposure Management",
+      "Taxonomy-L3": "Service Mapping",
+      "Taxonomy-L4": "Dependency Mapping",
+      "details": "Zeigt technische Abhängigkeiten für Risiko, Monitoring und Recovery."
+    },
+    {
+      "Taxonomy-L1": "Identify",
+      "Taxonomy-L2": "Asset & Exposure Management",
+      "Taxonomy-L3": "Risk & Resilience",
+      "Taxonomy-L4": "Business Impact Analysis Tool",
+      "details": "Bewertet Auswirkungen und priorisiert Services für BCM/DR."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Identity & Access",
+      "Taxonomy-L3": "Identity Management",
+      "Taxonomy-L4": "IAM",
+      "details": "Zentrale Authentisierung, Rollen, Gruppen und Identitätslebenszyklus."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Identity & Access",
+      "Taxonomy-L3": "Identity Governance",
+      "Taxonomy-L4": "Identity Governance & Administration",
+      "details": "Rezertifizierung, Rollenmodell, Berechtigungsmanagement und Deprovisioning."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Identity & Access",
+      "Taxonomy-L3": "Authentication",
+      "Taxonomy-L4": "Multi-Factor Authentication",
+      "details": "Erhöht Authentisierungsstärke für exponierte und privilegierte Zugriffe."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Identity & Access",
+      "Taxonomy-L3": "Privileged Access",
+      "Taxonomy-L4": "Privileged Access Management",
+      "details": "Kontrolliert, protokolliert und begrenzt privilegierte Administration."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Identity & Access",
+      "Taxonomy-L3": "Identity Management",
+      "Taxonomy-L4": "Customer Identity & Access Management",
+      "details": "Steuert externe Benutzer- und Kundenidentitäten."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Identity & Access",
+      "Taxonomy-L3": "Authentication",
+      "Taxonomy-L4": "Single Sign-On",
+      "details": "Reduziert Passwortweitergabe und zentralisiert Zugriffskontexte."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Identity & Access",
+      "Taxonomy-L3": "Authentication Federation",
+      "Taxonomy-L4": "Federation / OIDC / SAML",
+      "details": "Stellt kontrollierte, tokenbasierte Identitätsweitergabe bereit."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Identity & Access",
+      "Taxonomy-L3": "Authentication",
+      "Taxonomy-L4": "Passwordless Authentication",
+      "details": "Reduziert Phishing- und Passwortwiederverwendungsrisiken."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Identity & Access",
+      "Taxonomy-L3": "Identity Store",
+      "Taxonomy-L4": "Directory Services",
+      "details": "Verwaltet Benutzer, Gruppen und Organisationsattribute."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Identity & Access",
+      "Taxonomy-L3": "Trust Services",
+      "Taxonomy-L4": "PKI & Certificate Lifecycle",
+      "details": "Verwaltet Zertifikate, Schlüssel, Trust Anchors und Lebenszyklen."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Identity & Access",
+      "Taxonomy-L3": "Credential Protection",
+      "Taxonomy-L4": "Secrets Management",
+      "details": "Schützt technische Geheimnisse und begrenzt Zugriff und Lebensdauer."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Platform & Infrastructure",
+      "Taxonomy-L3": "Endpoint Security",
+      "Taxonomy-L4": "Endpoint Protection",
+      "details": "Schützt Clients/Server vor Malware, Fehlkonfiguration und Angriffen."
+    },
+    {
+      "Taxonomy-L1": "Detect",
+      "Taxonomy-L2": "Platform & Infrastructure",
+      "Taxonomy-L3": "Endpoint Detection",
+      "Taxonomy-L4": "EDR",
+      "details": "Erkennt und analysiert Endpoint-Angriffe; Übergang zu Response."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Platform & Infrastructure",
+      "Taxonomy-L3": "Configuration Security",
+      "Taxonomy-L4": "Server Hardening",
+      "details": "Setzt sichere Baselines und Härtungsmaßnahmen um."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Platform & Infrastructure",
+      "Taxonomy-L3": "Network Protection",
+      "Taxonomy-L4": "Network Security",
+      "details": "Schützt Netzwerkkommunikation und erzwingt Kontrollpunkte."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Platform & Infrastructure",
+      "Taxonomy-L3": "Network Protection",
+      "Taxonomy-L4": "Firewall / NGFW",
+      "details": "Segmentiert und filtert Netzwerkverkehr."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Platform & Infrastructure",
+      "Taxonomy-L3": "Remote Access",
+      "Taxonomy-L4": "VPN / ZTNA",
+      "details": "Kontrolliert Remote- und Adminzugriffe."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Platform & Infrastructure",
+      "Taxonomy-L3": "Configuration Security",
+      "Taxonomy-L4": "Secure Configuration Management",
+      "details": "Erzwingt und prüft sichere Konfigurationsbaselines."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Platform & Infrastructure",
+      "Taxonomy-L3": "Maintenance",
+      "Taxonomy-L4": "Patch Management",
+      "details": "Verfolgt und automatisiert Sicherheitsupdates."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Platform & Infrastructure",
+      "Taxonomy-L3": "Platform Security",
+      "Taxonomy-L4": "Virtualization Security",
+      "details": "Schützt Hypervisor, virtuelle Netze und Isolation."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Platform & Infrastructure",
+      "Taxonomy-L3": "Endpoint Management",
+      "Taxonomy-L4": "Mobile Device Management",
+      "details": "Verwaltet mobile Geräte, Richtlinien und Compliance."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Cloud & Container",
+      "Taxonomy-L3": "Cloud Posture Management",
+      "Taxonomy-L4": "CSPM",
+      "details": "Prüft Cloud-Konfigurationen, Findings und Compliance kontinuierlich."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Cloud & Container",
+      "Taxonomy-L3": "Cloud Workload Protection",
+      "Taxonomy-L4": "CWPP",
+      "details": "Schützt Cloud-Workloads, Container und Laufzeitumgebungen."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Cloud & Container",
+      "Taxonomy-L3": "Cloud Native Protection",
+      "Taxonomy-L4": "CNAPP",
+      "details": "Bündelt Posture, Workload, IaC, Identity und Detection im Cloud-Kontext."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Cloud & Container",
+      "Taxonomy-L3": "SaaS Security",
+      "Taxonomy-L4": "CASB",
+      "details": "Kontrolliert SaaS-Nutzung, Datenflüsse und Zugriffe."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Cloud & Container",
+      "Taxonomy-L3": "Container Platform Security",
+      "Taxonomy-L4": "Kubernetes Security",
+      "details": "Sichert Cluster, Namespaces, Policies und Laufzeit."
+    },
+    {
+      "Taxonomy-L1": "Identify",
+      "Taxonomy-L2": "Cloud & Container",
+      "Taxonomy-L3": "Container Security",
+      "Taxonomy-L4": "Container Image Scanning",
+      "details": "Prüft Images und Dependencies vor Deployment."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Cloud & Container",
+      "Taxonomy-L3": "Cloud Native Networking",
+      "Taxonomy-L4": "Service Mesh Security",
+      "details": "Steuert mTLS, Traffic Policies und Service-to-Service-Kommunikation."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Cloud & Container",
+      "Taxonomy-L3": "Cloud Identity",
+      "Taxonomy-L4": "Cloud Infrastructure Entitlement Management",
+      "details": "Analysiert und begrenzt Cloud-Berechtigungen."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Cloud & Container",
+      "Taxonomy-L3": "DevSecOps Cloud",
+      "Taxonomy-L4": "Infrastructure as Code Security",
+      "details": "Prüft IaC auf Fehlkonfigurationen vor Deployment."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Cloud & Container",
+      "Taxonomy-L3": "Cloud Crypto",
+      "Taxonomy-L4": "Cloud Secrets & Key Management",
+      "details": "Verwaltet Cloud-Schlüssel und Secrets."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Application & DevSecOps",
+      "Taxonomy-L3": "Application Security Testing",
+      "Taxonomy-L4": "SAST",
+      "details": "Findet Schwachstellen im Quellcode vor Auslieferung."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Application & DevSecOps",
+      "Taxonomy-L3": "Application Security Testing",
+      "Taxonomy-L4": "DAST",
+      "details": "Testet laufende Anwendungen von außen."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Application & DevSecOps",
+      "Taxonomy-L3": "Application Security Testing",
+      "Taxonomy-L4": "IAST",
+      "details": "Verbindet Laufzeitinformationen mit Sicherheitsanalyse."
+    },
+    {
+      "Taxonomy-L1": "Identify",
+      "Taxonomy-L2": "Application & DevSecOps",
+      "Taxonomy-L3": "Software Supply Chain",
+      "Taxonomy-L4": "Application SCA",
+      "details": "Analysiert Open-Source-Abhängigkeiten in Anwendungen."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Application & DevSecOps",
+      "Taxonomy-L3": "Application Protection",
+      "Taxonomy-L4": "API Security",
+      "details": "Schützt APIs, AuthN/AuthZ und API-Traffic."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Application & DevSecOps",
+      "Taxonomy-L3": "Runtime Protection",
+      "Taxonomy-L4": "WAF / RASP",
+      "details": "Schützt Anwendungen zur Laufzeit gegen Angriffe."
+    },
+    {
+      "Taxonomy-L1": "Govern",
+      "Taxonomy-L2": "Application & DevSecOps",
+      "Taxonomy-L3": "Development Governance",
+      "Taxonomy-L4": "Secure SDLC Tooling",
+      "details": "Verankert Sicherheitsaktivitäten im Entwicklungsprozess."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Application & DevSecOps",
+      "Taxonomy-L3": "DevSecOps",
+      "Taxonomy-L4": "CI/CD Security",
+      "details": "Schützt Pipelines, Runner, Artefakte und Freigaben."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Application & DevSecOps",
+      "Taxonomy-L3": "Software Integrity",
+      "Taxonomy-L4": "Code Signing",
+      "details": "Sichert Integrität und Herkunft von Artefakten."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Application & DevSecOps",
+      "Taxonomy-L3": "Credential Protection",
+      "Taxonomy-L4": "Secrets Detection",
+      "details": "Findet Secrets in Code, Repositories und Pipelines."
+    },
+    {
+      "Taxonomy-L1": "Identify",
+      "Taxonomy-L2": "Application & DevSecOps",
+      "Taxonomy-L3": "Application Risk",
+      "Taxonomy-L4": "Threat Modeling Tool",
+      "details": "Erfasst Bedrohungen und Designrisiken früh im SDLC."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Data & AI",
+      "Taxonomy-L3": "Data Protection",
+      "Taxonomy-L4": "DLP",
+      "details": "Verhindert oder erkennt unzulässige Datenabflüsse."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Data & AI",
+      "Taxonomy-L3": "Data Protection",
+      "Taxonomy-L4": "Encryption",
+      "details": "Schützt Daten in Ruhe, Übertragung oder Verarbeitung."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Data & AI",
+      "Taxonomy-L3": "Key Management",
+      "Taxonomy-L4": "KMS / HSM",
+      "details": "Verwaltet Schlüsselmaterial und kryptografische Vertrauensanker."
+    },
+    {
+      "Taxonomy-L1": "Identify",
+      "Taxonomy-L2": "Data & AI",
+      "Taxonomy-L3": "Data Security Posture",
+      "Taxonomy-L4": "DSPM",
+      "details": "Findet sensitive Daten und bewertet Schutzstatus."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Data & AI",
+      "Taxonomy-L3": "Data Platform Security",
+      "Taxonomy-L4": "Database Security",
+      "details": "Schützt Datenbanken, Zugriffe und Aktivitäten."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Data & AI",
+      "Taxonomy-L3": "Data Protection",
+      "Taxonomy-L4": "Data Masking / Tokenization",
+      "details": "Reduziert Exposition sensibler Daten in Verarbeitung und Tests."
+    },
+    {
+      "Taxonomy-L1": "Govern",
+      "Taxonomy-L2": "Data & AI",
+      "Taxonomy-L3": "AI Risk Management",
+      "Taxonomy-L4": "AI Governance",
+      "details": "Steuert KI-Nutzung, Verantwortlichkeiten, Freigaben und Risiken."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Data & AI",
+      "Taxonomy-L3": "AI Security",
+      "Taxonomy-L4": "AI Gateway",
+      "details": "Kontrolliert Prompts, Datenweitergabe, Policies und Logging für KI-Dienste."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Data & AI",
+      "Taxonomy-L3": "AI Security",
+      "Taxonomy-L4": "LLM Guardrails",
+      "details": "Begrenzt unerwünschte Ausgaben, Datenabfluss und Policy-Verstöße."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Data & AI",
+      "Taxonomy-L3": "AI Security",
+      "Taxonomy-L4": "Model Security",
+      "details": "Schützt Modelle, Artefakte und Modell-Lebenszyklus."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Data & AI",
+      "Taxonomy-L3": "AI Operations",
+      "Taxonomy-L4": "MLOps Security",
+      "details": "Sichert Trainings-, Deployment- und Monitoring-Pipelines für Modelle."
+    },
+    {
+      "Taxonomy-L1": "Detect",
+      "Taxonomy-L2": "Security Operations",
+      "Taxonomy-L3": "Security Analytics",
+      "Taxonomy-L4": "SIEM",
+      "details": "Korreliert Logs und Ereignisse für Erkennung und Nachweis."
+    },
+    {
+      "Taxonomy-L1": "Detect",
+      "Taxonomy-L2": "Security Operations",
+      "Taxonomy-L3": "Response Automation",
+      "Taxonomy-L4": "SOAR",
+      "details": "Automatisiert Triage, Routing, Playbooks und Erstreaktion."
+    },
+    {
+      "Taxonomy-L1": "Detect",
+      "Taxonomy-L2": "Security Operations",
+      "Taxonomy-L3": "Extended Detection",
+      "Taxonomy-L4": "XDR",
+      "details": "Korreliert Telemetrie über Endpoints, Netzwerk, Cloud und Identitäten."
+    },
+    {
+      "Taxonomy-L1": "Detect",
+      "Taxonomy-L2": "Security Operations",
+      "Taxonomy-L3": "Network Detection",
+      "Taxonomy-L4": "NDR",
+      "details": "Erkennt auffälliges Netzwerkverhalten."
+    },
+    {
+      "Taxonomy-L1": "Detect",
+      "Taxonomy-L2": "Security Operations",
+      "Taxonomy-L3": "Intrusion Detection",
+      "Taxonomy-L4": "IDS / IPS",
+      "details": "Erkennt oder blockiert Angriffe im Datenverkehr."
+    },
+    {
+      "Taxonomy-L1": "Identify",
+      "Taxonomy-L2": "Security Operations",
+      "Taxonomy-L3": "Threat Intelligence",
+      "Taxonomy-L4": "Threat Intelligence Platform",
+      "details": "Sammelt und operationalisiert Bedrohungsinformationen."
+    },
+    {
+      "Taxonomy-L1": "Detect",
+      "Taxonomy-L2": "Security Operations",
+      "Taxonomy-L3": "Threat Hunting",
+      "Taxonomy-L4": "Threat Hunting Platform",
+      "details": "Unterstützt proaktive Suche nach Kompromittierung."
+    },
+    {
+      "Taxonomy-L1": "Detect",
+      "Taxonomy-L2": "Security Operations",
+      "Taxonomy-L3": "Behavior Analytics",
+      "Taxonomy-L4": "UEBA",
+      "details": "Erkennt Anomalien im Nutzer- und Entitätsverhalten."
+    },
+    {
+      "Taxonomy-L1": "Detect",
+      "Taxonomy-L2": "Security Operations",
+      "Taxonomy-L3": "Active Detection",
+      "Taxonomy-L4": "Deception Technology",
+      "details": "Erzeugt Köder und Fallen zur frühzeitigen Erkennung."
+    },
+    {
+      "Taxonomy-L1": "Respond",
+      "Taxonomy-L2": "Security Operations",
+      "Taxonomy-L3": "SOC Operations",
+      "Taxonomy-L4": "SOC Case Management",
+      "details": "Verwaltet Fälle, Eskalationen und Nachweise im SOC."
+    },
+    {
+      "Taxonomy-L1": "Detect",
+      "Taxonomy-L2": "Monitoring & Observability",
+      "Taxonomy-L3": "Telemetry Management",
+      "Taxonomy-L4": "Log Management",
+      "details": "Sammelt, speichert und schützt Logs als Nachweis- und Analysebasis."
+    },
+    {
+      "Taxonomy-L1": "Detect",
+      "Taxonomy-L2": "Monitoring & Observability",
+      "Taxonomy-L3": "IT Monitoring",
+      "Taxonomy-L4": "Infrastructure Monitoring",
+      "details": "Überwacht Zustände und Verfügbarkeit der Infrastruktur."
+    },
+    {
+      "Taxonomy-L1": "Detect",
+      "Taxonomy-L2": "Monitoring & Observability",
+      "Taxonomy-L3": "Application Monitoring",
+      "Taxonomy-L4": "Application Performance Monitoring",
+      "details": "Überwacht Anwendungstelemetrie und Performance."
+    },
+    {
+      "Taxonomy-L1": "Detect",
+      "Taxonomy-L2": "Monitoring & Observability",
+      "Taxonomy-L3": "Network Monitoring",
+      "Taxonomy-L4": "Network Performance Monitoring",
+      "details": "Überwacht Netzqualität, Ausfälle und Kommunikationsbeziehungen."
+    },
+    {
+      "Taxonomy-L1": "Detect",
+      "Taxonomy-L2": "Monitoring & Observability",
+      "Taxonomy-L3": "Cloud Monitoring",
+      "Taxonomy-L4": "Cloud Monitoring",
+      "details": "Überwacht Cloud-Ressourcen, Events, Kosten- und Compliance-Signale."
+    },
+    {
+      "Taxonomy-L1": "Detect",
+      "Taxonomy-L2": "Monitoring & Observability",
+      "Taxonomy-L3": "OT Monitoring",
+      "Taxonomy-L4": "OT Monitoring",
+      "details": "Überwacht industrielle Netze und OT-Kommunikation."
+    },
+    {
+      "Taxonomy-L1": "Detect",
+      "Taxonomy-L2": "Monitoring & Observability",
+      "Taxonomy-L3": "Telemetry Platform",
+      "Taxonomy-L4": "OpenTelemetry Platform",
+      "details": "Standardisiert Telemetriedaten für Analyse und Nachweise."
+    },
+    {
+      "Taxonomy-L1": "Detect",
+      "Taxonomy-L2": "Monitoring & Observability",
+      "Taxonomy-L3": "Compliance Monitoring",
+      "Taxonomy-L4": "Configuration Compliance Monitoring",
+      "details": "Überwacht Soll-Ist-Abweichungen von Konfigurationsbaselines."
+    },
+    {
+      "Taxonomy-L1": "Detect",
+      "Taxonomy-L2": "Monitoring & Observability",
+      "Taxonomy-L3": "Compliance Monitoring",
+      "Taxonomy-L4": "Patch Status Monitoring",
+      "details": "Überwacht Patchstand und Schwachstellenstatus."
+    },
+    {
+      "Taxonomy-L1": "Detect",
+      "Taxonomy-L2": "Monitoring & Observability",
+      "Taxonomy-L3": "Service Monitoring",
+      "Taxonomy-L4": "Synthetic Monitoring",
+      "details": "Prüft Services aus Nutzersicht und erkennt Ausfälle frühzeitig."
+    },
+    {
+      "Taxonomy-L1": "Respond",
+      "Taxonomy-L2": "Incident & Crisis Management",
+      "Taxonomy-L3": "Incident Response",
+      "Taxonomy-L4": "Incident Management",
+      "details": "Koordiniert Bearbeitung, Priorisierung, Eskalation und Nachweisführung."
+    },
+    {
+      "Taxonomy-L1": "Respond",
+      "Taxonomy-L2": "Incident & Crisis Management",
+      "Taxonomy-L3": "Incident Response",
+      "Taxonomy-L4": "Incident Response Platform",
+      "details": "Unterstützt Playbooks, Workflows, Evidenz und Maßnahmen."
+    },
+    {
+      "Taxonomy-L1": "Respond",
+      "Taxonomy-L2": "Incident & Crisis Management",
+      "Taxonomy-L3": "Forensics",
+      "Taxonomy-L4": "Digital Forensics",
+      "details": "Sichert, analysiert und dokumentiert digitale Spuren."
+    },
+    {
+      "Taxonomy-L1": "Respond",
+      "Taxonomy-L2": "Incident & Crisis Management",
+      "Taxonomy-L3": "Forensics",
+      "Taxonomy-L4": "Malware Analysis",
+      "details": "Analysiert Schadsoftware und Indikatoren."
+    },
+    {
+      "Taxonomy-L1": "Respond",
+      "Taxonomy-L2": "Incident & Crisis Management",
+      "Taxonomy-L3": "Incident Response",
+      "Taxonomy-L4": "Breach Response",
+      "details": "Unterstützt Eindämmung und Wiederanlauf nach Sicherheitsvorfällen."
+    },
+    {
+      "Taxonomy-L1": "Respond",
+      "Taxonomy-L2": "Incident & Crisis Management",
+      "Taxonomy-L3": "Crisis Management",
+      "Taxonomy-L4": "Crisis Communication",
+      "details": "Steuert interne und externe Kommunikation im Krisenfall."
+    },
+    {
+      "Taxonomy-L1": "Respond",
+      "Taxonomy-L2": "Incident & Crisis Management",
+      "Taxonomy-L3": "Crisis Management",
+      "Taxonomy-L4": "War Room / Collaboration",
+      "details": "Bündelt Kommunikation und Koordination in kritischen Lagen."
+    },
+    {
+      "Taxonomy-L1": "Respond",
+      "Taxonomy-L2": "Incident & Crisis Management",
+      "Taxonomy-L3": "Attack Mitigation",
+      "Taxonomy-L4": "DDoS Mitigation",
+      "details": "Mildert Verfügbarkeitsangriffe ab."
+    },
+    {
+      "Taxonomy-L1": "Respond",
+      "Taxonomy-L2": "Incident & Crisis Management",
+      "Taxonomy-L3": "External Response",
+      "Taxonomy-L4": "Takedown Services",
+      "details": "Unterstützt Entfernung missbräuchlicher Domains, Phishing oder Fake-Auftritte."
+    },
+    {
+      "Taxonomy-L1": "Respond",
+      "Taxonomy-L2": "Incident & Crisis Management",
+      "Taxonomy-L3": "Preparedness",
+      "Taxonomy-L4": "Incident Simulation / Tabletop",
+      "details": "Übt Rollen, Kommunikation und Entscheidungswege."
+    },
+    {
+      "Taxonomy-L1": "Recover",
+      "Taxonomy-L2": "Resilience & Recovery",
+      "Taxonomy-L3": "Recovery Technology",
+      "Taxonomy-L4": "Backup & Recovery",
+      "details": "Sichert Daten und ermöglicht Wiederherstellung."
+    },
+    {
+      "Taxonomy-L1": "Recover",
+      "Taxonomy-L2": "Resilience & Recovery",
+      "Taxonomy-L3": "Recovery Technology",
+      "Taxonomy-L4": "Disaster Recovery",
+      "details": "Stellt kritische Services nach Störungen wieder her."
+    },
+    {
+      "Taxonomy-L1": "Recover",
+      "Taxonomy-L2": "Resilience & Recovery",
+      "Taxonomy-L3": "Resilience Management",
+      "Taxonomy-L4": "Business Continuity Management",
+      "details": "Plant und steuert Betriebsfortführung."
+    },
+    {
+      "Taxonomy-L1": "Recover",
+      "Taxonomy-L2": "Resilience & Recovery",
+      "Taxonomy-L3": "Recovery Technology",
+      "Taxonomy-L4": "Immutable Backup",
+      "details": "Schützt Backups vor Veränderung und Löschung."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Resilience & Recovery",
+      "Taxonomy-L3": "Data Resilience",
+      "Taxonomy-L4": "Storage Security",
+      "details": "Schützt Speicher und Backup-Infrastruktur."
+    },
+    {
+      "Taxonomy-L1": "Recover",
+      "Taxonomy-L2": "Resilience & Recovery",
+      "Taxonomy-L3": "Recovery Automation",
+      "Taxonomy-L4": "Recovery Orchestration",
+      "details": "Automatisiert Wiederherstellungsabläufe und Prioritäten."
+    },
+    {
+      "Taxonomy-L1": "Recover",
+      "Taxonomy-L2": "Resilience & Recovery",
+      "Taxonomy-L3": "Recovery Assurance",
+      "Taxonomy-L4": "Restore Testing",
+      "details": "Prüft Wiederherstellbarkeit regelmäßig und nachvollziehbar."
+    },
+    {
+      "Taxonomy-L1": "Recover",
+      "Taxonomy-L2": "Resilience & Recovery",
+      "Taxonomy-L3": "Recovery Assurance",
+      "Taxonomy-L4": "Resilience Testing",
+      "details": "Testet Failover, Notfallprozesse und Resilienz."
+    },
+    {
+      "Taxonomy-L1": "Recover",
+      "Taxonomy-L2": "Resilience & Recovery",
+      "Taxonomy-L3": "Recovery Technology",
+      "Taxonomy-L4": "Ransomware Recovery",
+      "details": "Unterstützt Wiederherstellung nach Ransomware-Vorfällen."
+    },
+    {
+      "Taxonomy-L1": "Recover",
+      "Taxonomy-L2": "Resilience & Recovery",
+      "Taxonomy-L3": "Data Lifecycle",
+      "Taxonomy-L4": "Archive & Retention",
+      "details": "Sichert Aufbewahrung, Wiederauffindbarkeit und Löschung."
+    },
+    {
+      "Taxonomy-L1": "Govern",
+      "Taxonomy-L2": "Professional Services",
+      "Taxonomy-L3": "Managed Security Service",
+      "Taxonomy-L4": "MSSP",
+      "details": "Betreibt Sicherheitskontrollen oder unterstützt deren Umsetzung."
+    },
+    {
+      "Taxonomy-L1": "Detect",
+      "Taxonomy-L2": "Professional Services",
+      "Taxonomy-L3": "Managed Detection",
+      "Taxonomy-L4": "SOC as a Service",
+      "details": "Bietet externe SOC-Fähigkeiten und Detection-Prozesse."
+    },
+    {
+      "Taxonomy-L1": "Respond",
+      "Taxonomy-L2": "Professional Services",
+      "Taxonomy-L3": "Incident Response Service",
+      "Taxonomy-L4": "CSIRT as a Service",
+      "details": "Stellt Incident-Response-Fähigkeiten als Dienst bereit."
+    },
+    {
+      "Taxonomy-L1": "Govern",
+      "Taxonomy-L2": "Professional Services",
+      "Taxonomy-L3": "Consulting",
+      "Taxonomy-L4": "GRC Consulting",
+      "details": "Unterstützt Governance, Risiko, ISMS und Auditfähigkeit."
+    },
+    {
+      "Taxonomy-L1": "Govern",
+      "Taxonomy-L2": "Professional Services",
+      "Taxonomy-L3": "Consulting",
+      "Taxonomy-L4": "Security Architecture Consulting",
+      "details": "Unterstützt Architektur, Segmentierung und sichere Zielbilder."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Professional Services",
+      "Taxonomy-L3": "Consulting",
+      "Taxonomy-L4": "Cloud Security Consulting",
+      "details": "Unterstützt sichere Cloud-Konfiguration und Betriebsmodelle."
+    },
+    {
+      "Taxonomy-L1": "Protect",
+      "Taxonomy-L2": "Professional Services",
+      "Taxonomy-L3": "Consulting",
+      "Taxonomy-L4": "DevSecOps Consulting",
+      "details": "Verankert Sicherheit in Entwicklungs- und Release-Prozessen."
+    },
+    {
+      "Taxonomy-L1": "Identify",
+      "Taxonomy-L2": "Professional Services",
+      "Taxonomy-L3": "Security Testing",
+      "Taxonomy-L4": "Red Teaming / Penetration Testing",
+      "details": "Findet Schwachstellen und prüft Detektions- und Reaktionsfähigkeit."
+    },
+    {
+      "Taxonomy-L1": "Govern",
+      "Taxonomy-L2": "Professional Services",
+      "Taxonomy-L3": "Training",
+      "Taxonomy-L4": "Awareness Services",
+      "details": "Bietet Schulungen, Kampagnen und Übungen."
+    },
+    {
+      "Taxonomy-L1": "Govern",
+      "Taxonomy-L2": "Professional Services",
+      "Taxonomy-L3": "Implementation Service",
+      "Taxonomy-L4": "Integration Services",
+      "details": "Integriert Produkte, Prozesse und Nachweise."
+    },
+    {
+      "Taxonomy-L1": "Detect",
+      "Taxonomy-L2": "Professional Services",
+      "Taxonomy-L3": "Managed Detection",
+      "Taxonomy-L4": "Managed Detection & Response",
+      "details": "Betreibt Detection und Response mit externer Unterstützung."
+    },
+    {
+      "Taxonomy-L1": "Respond",
+      "Taxonomy-L2": "Professional Services",
+      "Taxonomy-L3": "Incident Response Service",
+      "Taxonomy-L4": "Incident Response Retainer",
+      "details": "Sichert Verfügbarkeit von Experten und Prozessen im Ernstfall."
+    }
+  ]
+}
