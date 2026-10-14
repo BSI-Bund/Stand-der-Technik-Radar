@@ -1,0 +1,248 @@
+.radar-workspace {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+.taxonomy-navigator {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--panel);
+  padding: 16px;
+  max-height: 860px;
+  overflow: auto;
+}
+.navigator-heading h2 {
+  font-size: 18px;
+}
+.navigator-heading p {
+  font-size: 14px;
+  color: var(--dim);
+}
+.taxonomy-navigator ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.taxonomy-navigator ul ul {
+  padding-left: 12px;
+  border-left: 1px solid var(--border);
+  margin-left: 8px;
+}
+.tree-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 0;
+}
+.tree-node.kern-btn {
+  flex: 1;
+  min-width: 0;
+  border-color: transparent;
+  background: transparent;
+  text-align: left;
+  padding: 8px;
+  justify-content: start;
+}
+.tree-node .kern-label {
+  width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.tree-node small {
+  display: block;
+  color: var(--dim);
+  font-weight: 400;
+}
+.tree-node[aria-current] {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+.tree-expander.kern-btn {
+  width: 44px;
+  flex: none;
+  padding: 4px;
+  border-color: transparent;
+  background: transparent;
+}
+.map-panel {
+  container-type: inline-size;
+  min-width: 0;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 16px;
+}
+.chart-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  align-items: center;
+}
+.search-label {
+  font-size: 14px;
+  font-weight: 500;
+}
+.segment-search {
+  flex: 1;
+  max-width: 280px;
+}
+.zoom-controls {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+.zoom-controls .kern-btn {
+  min-width: 44px;
+  padding: 8px;
+}
+.ring-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin: 16px 0;
+  color: var(--dim);
+  font-size: 13px;
+}
+.ring-legend-title {
+  font-weight: 600;
+}
+.ring-legend-row {
+  display: flex;
+  gap: 6px;
+}
+.ring-legend-row strong {
+  color: var(--text);
+  font-weight: 500;
+}
+.chart-wrap {
+  position: relative;
+  width: 100%;
+  height: min(100cqw, 860px);
+  margin: auto;
+  overflow: hidden;
+}
+.sunburst {
+  width: 100%;
+  height: 100%;
+  font-family: var(--kern-typography-font-family-default);
+}
+.sunburst-core {
+  fill: var(--panel);
+  stroke: var(--border);
+}
+.core-title {
+  fill: var(--text);
+  font-size: 18px;
+  font-weight: 600;
+}
+.core-subtitle {
+  fill: var(--dim);
+  font-size: 12px;
+}
+.slice {
+  cursor: pointer;
+  outline: none;
+}
+.slice path {
+  stroke: var(--bg);
+  stroke-width: 1.5;
+}
+.slice:hover path,
+.slice:focus-visible path {
+  stroke: var(--accent);
+  stroke-width: 4;
+}
+.slice.selected path {
+  stroke: var(--accent);
+  stroke-width: 4;
+}
+.slice.matched path {
+  stroke: var(--accent);
+  stroke-width: 3;
+}
+.slice-label {
+  fill: #131525;
+  font-weight: 600;
+  pointer-events: none;
+}
+.tooltip,
+.trend-tooltip {
+  position: fixed;
+  z-index: 10;
+  max-width: min(320px, 80vw);
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg);
+  color: var(--text);
+  box-shadow: 0 4px 12px #0002;
+  pointer-events: none;
+  font-size: 14px;
+}
+.tooltip-title {
+  font-weight: 600;
+}
+@media (max-width: 1050px) {
+  .radar-workspace {
+    grid-template-columns: 240px minmax(0, 1fr);
+    gap: 16px;
+  }
+}
+@media (max-width: 800px) {
+  .radar-workspace {
+    display: flex;
+    flex-direction: column;
+  }
+  .map-panel {
+    order: -1;
+    width: 100%;
+    padding: 12px;
+  }
+  .taxonomy-navigator {
+    width: 100%;
+    max-height: 450px;
+  }
+  .chart-tools .search-label {
+    flex-basis: 100%;
+  }
+  .segment-search {
+    max-width: none;
+  }
+  .chart-wrap {
+    min-height: 260px;
+  }
+}
+
+/* Dynamic tree/detail rows must never become a page-scroll anchor for chart selection. */
+.radar-workspace,
+.details-panel {
+  overflow-anchor: none;
+}
+.library-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 16px;
+  margin-bottom: 24px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 14px;
+}
+.library-status > div {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.library-status .kern-btn {
+  flex: none;
+}
+@media (max-width: 600px) {
+  .library-status {
+    flex-direction: column;
+    align-items: start;
+  }
+  .primary-nav .viewer-link {
+    margin-left: 0;
+  }
+}

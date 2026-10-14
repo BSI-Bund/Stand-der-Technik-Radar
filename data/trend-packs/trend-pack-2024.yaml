@@ -1,0 +1,562 @@
+schema_version: 1.0.0
+year: 2024
+label: BSI Trendanalyse 2024
+status: active
+source:
+  type: pdf
+  title: BSI Trendanalyse 2024
+  file: data/source/trends/2024/raw/20240529_BSI UTA_Auswertung.pdf
+  extracted_from: data/source/trends/2024/extracted/trendanalyse_2024.summary.json
+display:
+  theme_color: '#17A2B8'
+  sort_order: 2024
+  enabled: true
+  grouping_mode: ui_focus_groups
+clusters:
+- id: 2024-infra-resilience
+  label: Infrastruktur & Resilienz
+  short_label: Infra
+  description: Infrastruktur-, Betriebs- und Resilienzthemen.
+  color: '#2F6BFF'
+  order: 1
+  map_position:
+    x: 260
+    y: 210
+- id: 2024-governance-transformation
+  label: Governance & Transformation
+  short_label: Governance
+  description: Governance-, Organisations- und Transformationsfragen.
+  color: '#8B5CF6'
+  order: 2
+  map_position:
+    x: 720
+    y: 210
+- id: 2024-identity-modern-security
+  label: Identität & moderne Sicherheit
+  short_label: Identity
+  description: Identitäts- und moderne Sicherheitsthemen.
+  color: '#12B981'
+  order: 3
+  map_position:
+    x: 260
+    y: 560
+- id: 2024-sector-threats
+  label: Branchen & Bedrohungen
+  short_label: Threats
+  description: Branchenbezug und aktuelle Bedrohungslage.
+  color: '#F59E0B'
+  order: 4
+  map_position:
+    x: 720
+    y: 560
+themes:
+- id: 2024-cloud-outsourcing
+  cluster_id: 2024-infra-resilience
+  label: Auslagerung des IT-Betriebs in die Cloud
+  short_label: Cloud-Auslagerung
+  description: Auslagerung des IT-Betriebs in Cloud-Dienste, einschließlich Sicherheits-
+    und Abhängigkeitsfragen.
+  management_summary: Cloud-Auslagerung bleibt ein zentrales Infrastrukturthema mit
+    Auswirkungen auf Souveränität, Kontrolle und Ausfallsicherheit.
+  aliases:
+  - Cloud
+  - Cloud-Sicherheit
+  - Auslagerung in Clouddienste
+  keywords:
+  - cloud
+  - public cloud
+  - multicloud
+  - iaas
+  - paas
+  - saas
+  - auslagerung
+  - confidential computing
+  negative_keywords: []
+  signals:
+    tag_hints:
+    - cloud
+    - plattform
+    - betrieb
+    target_object_hints:
+    - plattform
+    - service
+    - anwendung
+  color: '#2F6BFF'
+  order: 1
+  enabled: true
+  map_position:
+    x: 220
+    y: 150
+  facets:
+  - id: dependency
+    label: Abhängigkeiten
+    description: Abhängigkeiten und Souveränität.
+    weight: 1.0
+  - id: runtime_protection
+    label: Betriebsschutz
+    description: Schutz von Betrieb und Verarbeitung.
+    weight: 1.0
+  - id: availability
+    label: Verfügbarkeit
+    description: Resilienz und Ausfallsicherheit.
+    weight: 1.0
+  - id: control
+    label: Kontrollierbarkeit
+    description: Kontrolle, Nachweisbarkeit und Compliance.
+    weight: 1.0
+- id: 2024-security-concepts
+  cluster_id: 2024-governance-transformation
+  label: Sicherheitskonzepte
+  short_label: Sicherheitskonzepte
+  description: Praktikable und ganzheitliche Sicherheitskonzepte für Betreiber und
+    Informationsverbünde.
+  management_summary: Praktikable Sicherheitskonzepte verbinden Governance, Lebenszyklus,
+    Scanbarkeit und Managementsysteme.
+  aliases:
+  - ISMS
+  - Sicherheitskonzept
+  keywords:
+  - sicherheitskonzept
+  - isms
+  - managementsystem
+  - betreiber
+  - lebenszyklus
+  - scan
+  - härtung
+  negative_keywords: []
+  signals:
+    tag_hints:
+    - governance
+    - management
+    - prozess
+    target_object_hints:
+    - organisation
+    - prozess
+    - anwendung
+  color: '#8B5CF6'
+  order: 2
+  enabled: true
+  map_position:
+    x: 660
+    y: 140
+  facets:
+  - id: governance
+    label: Governance
+    description: Rollen, Verantwortung und Vorgaben.
+    weight: 1.0
+  - id: lifecycle
+    label: Lebenszyklus
+    description: Betrachtung von Beschaffung bis Aussonderung.
+    weight: 1.0
+  - id: automation
+    label: Automatisierbarkeit
+    description: Maschinenlesbare Regelungen und Prüfungen.
+    weight: 1.0
+  - id: integration
+    label: Integration
+    description: Zusammenspiel von Datenschutz, Geheimschutz und Informationssicherheit.
+    weight: 1.0
+- id: 2024-kritis
+  cluster_id: 2024-infra-resilience
+  label: Kritische Infrastrukturen
+  short_label: KRITIS
+  description: Schutz und Resilienz kritischer Infrastrukturen mit Fokus auf Energie
+    und Wasser.
+  management_summary: KRITIS-Schutz verbindet Resilienz, Versorgungssicherheit und
+    Cybersicherheit in besonders sensiblen Domänen.
+  aliases:
+  - KRITIS
+  - kritische Infrastruktur
+  keywords:
+  - kritis
+  - kritische infrastruktur
+  - energie
+  - wasser
+  - versorgung
+  - rechenzentrum
+  - resilienz
+  negative_keywords: []
+  signals:
+    tag_hints:
+    - kritis
+    - resilienz
+    - versorgung
+    target_object_hints:
+    - infrastruktur
+    - netz
+    - rechenzentrum
+  color: '#2563EB'
+  order: 3
+  enabled: true
+  map_position:
+    x: 360
+    y: 260
+  facets:
+  - id: resilience
+    label: Resilienz
+    description: Widerstandsfähigkeit und Wiederanlauf.
+    weight: 1.0
+  - id: sector_focus
+    label: Sektorbezug
+    description: Fokus auf Energie, Wasser und KRITIS-Dienste.
+    weight: 1.0
+  - id: attack_scenarios
+    label: Angriffsszenarien
+    description: Cyber- und physische Angriffe auf KRITIS.
+    weight: 1.0
+  - id: coordination
+    label: Koordination
+    description: Zusammenspiel staatlicher und ziviler Akteure.
+    weight: 1.0
+- id: 2024-finance-digitalization
+  cluster_id: 2024-sector-threats
+  label: Digitalisierung im Finanzwesen
+  short_label: Finanzwesen
+  description: Digitale Finanz- und Rechnungsprozesse mit besonderen Vertrauens- und
+    Sicherheitsanforderungen.
+  management_summary: Digitale Finanzprozesse erhöhen Effizienz, verschieben aber
+    auch Angriffsflächen und Vertrauensanforderungen.
+  aliases:
+  - Finanzdigitalisierung
+  keywords:
+  - finanzwesen
+  - rechnungsinformationen
+  - belegfluss
+  - bezahlung
+  - rechnungsportal
+  - digitaler euro
+  negative_keywords: []
+  signals:
+    tag_hints:
+    - finanz
+    - vertrauen
+    - transaktion
+    target_object_hints:
+    - anwendung
+    - plattform
+    - dienst
+  color: '#F59E0B'
+  order: 4
+  enabled: true
+  map_position:
+    x: 810
+    y: 450
+  facets:
+  - id: transactions
+    label: Transaktionssicherheit
+    description: Sicherheit digitaler Transaktionen und Belegflüsse.
+    weight: 1.0
+  - id: trust
+    label: Vertrauen
+    description: Vertrauenswürdige Prozesse und Nachweise.
+    weight: 1.0
+  - id: platforms
+    label: Plattformen
+    description: Digitale Austausch- und Portalstrukturen.
+    weight: 1.0
+  - id: sector_risk
+    label: Branchenrisiko
+    description: Sektorbezogene Verwundbarkeiten.
+    weight: 1.0
+- id: 2024-skills-gap
+  cluster_id: 2024-governance-transformation
+  label: Fachkräftemangel
+  short_label: Fachkräftemangel
+  description: Mangel an Cybersicherheits-Fachkräften und Bedarf an Ausbildung, Weiterbildung
+    und Übungsumgebungen.
+  management_summary: Der Fachkräftemangel wirkt als Querschnittsrisiko auf Umsetzung,
+    Betrieb und Weiterentwicklung von Sicherheit.
+  aliases:
+  - Skills Gap
+  keywords:
+  - fachkräftemangel
+  - ausbildung
+  - weiterbildung
+  - cyber range
+  - curriculum
+  - expertinnen
+  - experten
+  negative_keywords: []
+  signals:
+    tag_hints:
+    - personal
+    - ausbildung
+    - betrieb
+    target_object_hints:
+    - organisation
+    - prozess
+  color: '#7C3AED'
+  order: 5
+  enabled: true
+  map_position:
+    x: 790
+    y: 250
+  facets:
+  - id: training
+    label: Ausbildung
+    description: Ausbildung und Grundlagen.
+    weight: 1.0
+  - id: upskilling
+    label: Weiterbildung
+    description: Weiterentwicklung vorhandener Kompetenzen.
+    weight: 1.0
+  - id: simulation
+    label: Übungsumgebungen
+    description: Cyber Range und Simulationen.
+    weight: 1.0
+  - id: organizational_capacity
+    label: Organisationsfähigkeit
+    description: Auswirkung auf betriebliche Sicherheitsfähigkeit.
+    weight: 1.0
+- id: 2024-sustainable-digitalization
+  cluster_id: 2024-governance-transformation
+  label: Nachhaltige Digitalisierung
+  short_label: Nachhaltigkeit
+  description: Nachhaltigkeitsaspekte der Digitalisierung und deren Einfluss auf Sicherheits-
+    und Betriebsentscheidungen.
+  management_summary: Nachhaltige Digitalisierung verbindet Ressourcenfragen, Betrieb
+    und Steuerung mit langfristiger Sicherheit.
+  aliases:
+  - nachhaltigkeit
+  keywords:
+  - nachhaltigkeit
+  - nachhaltige digitalisierung
+  - energie-aware
+  - ressourcen
+  - betrieb
+  negative_keywords: []
+  signals:
+    tag_hints:
+    - betrieb
+    - governance
+    - ressourcen
+    target_object_hints:
+    - infrastruktur
+    - prozess
+  color: '#9333EA'
+  order: 6
+  enabled: true
+  map_position:
+    x: 650
+    y: 300
+  facets:
+  - id: resource_efficiency
+    label: Ressourceneffizienz
+    description: Ressourcen und Energieverbrauch.
+    weight: 1.0
+  - id: governance
+    label: Steuerung
+    description: Steuerung und Leitplanken.
+    weight: 1.0
+  - id: operation
+    label: Betrieb
+    description: Nachhaltige Betriebsmodelle.
+    weight: 1.0
+  - id: risk_tradeoffs
+    label: Abwägungen
+    description: Abwägungen zwischen Nachhaltigkeit und Sicherheit.
+    weight: 1.0
+- id: 2024-passwortlose-auth
+  cluster_id: 2024-identity-modern-security
+  label: Passwortlose Authentisierung
+  short_label: Passwortlos
+  description: Passwortlose Verfahren als Trend in der Authentisierung und Identitätssicherung.
+  management_summary: Passwortlose Verfahren verändern Identitäts- und Zugriffsmodelle
+    und erhöhen zugleich Anforderungen an Vertrauensanker und Geräte.
+  aliases:
+  - passkeys
+  - passwordless
+  keywords:
+  - passwortlos
+  - passkeys
+  - passwordless
+  - authentisierung
+  - identität
+  - fido
+  negative_keywords: []
+  signals:
+    tag_hints:
+    - authentisierung
+    - identität
+    target_object_hints:
+    - identität
+    - anwendung
+    - endgerät
+  color: '#12B981'
+  order: 7
+  enabled: true
+  map_position:
+    x: 210
+    y: 500
+  facets:
+  - id: authn
+    label: Authentisierung
+    description: Starke und benutzerfreundliche Authentisierung.
+    weight: 1.0
+  - id: device_binding
+    label: Gerätebindung
+    description: Bindung an Vertrauensanker und Geräte.
+    weight: 1.0
+  - id: identity_lifecycle
+    label: Lebenszyklus
+    description: Verwaltung und Wiederherstellung.
+    weight: 1.0
+  - id: usability_security
+    label: Usability vs. Sicherheit
+    description: Balance zwischen Nutzbarkeit und Schutz.
+    weight: 1.0
+- id: 2024-mobile-id-wallet
+  cluster_id: 2024-identity-modern-security
+  label: Mobile ID / digital Wallet
+  short_label: Wallet
+  description: Mobile digitale Identitäten und Wallets mit Fokus auf Vertrauensdienste,
+    Nachweise und Endgerätesicherheit.
+  management_summary: Wallets und mobile Identitäten eröffnen neue Nutzungsszenarien,
+    erhöhen aber Anforderungen an Vertrauensmodelle und Endgeräte.
+  aliases:
+  - digital wallet
+  - mobile id
+  - wallet
+  - eID
+  keywords:
+  - wallet
+  - mobile id
+  - digitale identität
+  - eid
+  - credential
+  - nachweis
+  - app
+  negative_keywords: []
+  signals:
+    tag_hints:
+    - identität
+    - wallet
+    - vertrauen
+    target_object_hints:
+    - identität
+    - endgerät
+    - anwendung
+  color: '#10B981'
+  order: 8
+  enabled: true
+  map_position:
+    x: 340
+    y: 620
+  facets:
+  - id: identity_protection
+    label: Schutz der Identität
+    description: Schutz digitaler Nachweise und Identitäten.
+    weight: 1.0
+  - id: endpoint_security
+    label: Endpoint-Sicherheit
+    description: Absicherung mobiler Endgeräte.
+    weight: 1.0
+  - id: trust_model
+    label: Vertrauensmodell
+    description: Ausstellung, Validierung und Nutzung von Nachweisen.
+    weight: 1.0
+  - id: integration
+    label: Integration
+    description: Integration in Dienste und Plattformen.
+    weight: 1.0
+- id: 2024-spyware-infostealer
+  cluster_id: 2024-sector-threats
+  label: Spyware / Infostealer
+  short_label: Spyware
+  description: Aktuelle Bedrohungen durch Spyware und Infostealer im Umfeld moderner
+    Angreiferökosysteme.
+  management_summary: Spyware und Infostealer stehen für aktuelle Angriffsökonomien
+    und erhöhen Anforderungen an Erkennung, Härtung und Reaktion.
+  aliases:
+  - infostealer
+  - spyware
+  keywords:
+  - spyware
+  - infostealer
+  - stealer
+  - malware
+  - exfiltration
+  - phishing
+  negative_keywords: []
+  signals:
+    tag_hints:
+    - angriff
+    - malware
+    - detektion
+    target_object_hints:
+    - endgerät
+    - anwendung
+    - netz
+  color: '#FBBF24'
+  order: 9
+  enabled: true
+  map_position:
+    x: 700
+    y: 640
+  facets:
+  - id: detection
+    label: Erkennung
+    description: Erkennung von Spyware und Datenabfluss.
+    weight: 1.0
+  - id: hardening
+    label: Härtung
+    description: Prävention und Härtung.
+    weight: 1.0
+  - id: response
+    label: Reaktion
+    description: Incident Response und Eindämmung.
+    weight: 1.0
+  - id: exfiltration
+    label: Datenabfluss
+    description: Verhinderung und Monitoring von Exfiltration.
+    weight: 1.0
+- id: 2024-zero-trust
+  cluster_id: 2024-identity-modern-security
+  label: Zero Trust
+  short_label: Zero Trust
+  description: Zero-Trust-Ansätze zur Segmentierung, Identitätsprüfung und Minimierung
+    impliziten Vertrauens.
+  management_summary: Zero Trust verschiebt Sicherheit weg von Vertrauenszonen hin
+    zu kontinuierlicher Prüfung, Segmentierung und minimalen Rechten.
+  aliases:
+  - zero-trust
+  - zt
+  keywords:
+  - zero trust
+  - least privilege
+  - segmentierung
+  - kontinuierliche verifikation
+  - trust
+  negative_keywords: []
+  signals:
+    tag_hints:
+    - identität
+    - zugriff
+    - segmentierung
+    target_object_hints:
+    - netz
+    - anwendung
+    - identität
+  color: '#22C55E'
+  order: 10
+  enabled: true
+  map_position:
+    x: 180
+    y: 650
+  facets:
+  - id: least_privilege
+    label: Least Privilege
+    description: Minimale Rechte und Zugriffskontrolle.
+    weight: 1.0
+  - id: continuous_verification
+    label: Kontinuierliche Prüfung
+    description: Laufende Prüfung von Identität und Kontext.
+    weight: 1.0
+  - id: segmentation
+    label: Segmentierung
+    description: Zonierung und Begrenzung von Bewegungsfreiheit.
+    weight: 1.0
+  - id: policy_enforcement
+    label: Policy Enforcement
+    description: Technische Durchsetzung von Richtlinien.
+    weight: 1.0

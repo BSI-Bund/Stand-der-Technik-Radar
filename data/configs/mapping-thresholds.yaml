@@ -1,0 +1,10 @@
+strong_threshold: 0.82
+medium_threshold: 0.70
+weak_threshold: 0.60
+max_themes_per_requirement: 3
+weights:
+  semantic: 0.45
+  lexical: 0.20
+  tag: 0.15
+  target: 0.10
+  facet: 0.10

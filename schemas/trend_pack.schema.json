@@ -1,0 +1,245 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/sdt-trend-map/trend-pack.schema.json",
+  "title": "Trend Pack",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "year",
+    "label",
+    "status",
+    "source",
+    "display",
+    "clusters",
+    "themes"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "year": {
+      "type": "integer",
+      "minimum": 2000
+    },
+    "label": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "active", "archived"]
+    },
+    "source": {
+      "type": "object",
+      "required": ["type", "title", "file", "extracted_from"],
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "file": {
+          "type": "string"
+        },
+        "extracted_from": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "display": {
+      "type": "object",
+      "required": ["theme_color", "sort_order", "enabled"],
+      "properties": {
+        "theme_color": {
+          "type": "string"
+        },
+        "sort_order": {
+          "type": "integer"
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "grouping_mode": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "clusters": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "color", "order", "map_position"],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "short_label": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "color": {
+            "type": "string"
+          },
+          "order": {
+            "type": "integer"
+          },
+          "map_position": {
+            "type": "object",
+            "required": ["x", "y"],
+            "properties": {
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "themes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "cluster_id",
+          "label",
+          "description",
+          "management_summary",
+          "keywords",
+          "color",
+          "order",
+          "enabled",
+          "map_position",
+          "facets"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "cluster_id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "short_label": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "management_summary": {
+            "type": "string"
+          },
+          "aliases": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "keywords": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "negative_keywords": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "signals": {
+            "type": "object",
+            "properties": {
+              "tag_hints": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "target_object_hints": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "catalog_hints": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "additionalProperties": true
+          },
+          "color": {
+            "type": "string"
+          },
+          "order": {
+            "type": "integer"
+          },
+          "enabled": {
+            "type": "boolean"
+          },
+          "map_position": {
+            "type": "object",
+            "required": ["x", "y"],
+            "properties": {
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              }
+            },
+            "additionalProperties": false
+          },
+          "facets": {
+            "type": "array",
+            "minItems": 3,
+            "maxItems": 6,
+            "items": {
+              "type": "object",
+              "required": ["id", "label", "description", "weight"],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "weight": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

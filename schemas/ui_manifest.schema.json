@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schema_version", "generated_at", "available_years"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "available_years": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["year", "label", "enabled", "trend_pack", "aggregates"],
+        "additionalProperties": false,
+        "properties": {
+          "year": {
+            "type": "integer",
+            "minimum": 2000,
+            "maximum": 2100
+          },
+          "label": {
+            "type": "string"
+          },
+          "enabled": {
+            "type": "boolean"
+          },
+          "trend_pack": {
+            "type": "string",
+            "pattern": "^generated/trend-pack-[0-9]{4}\\.json$"
+          },
+          "aggregates": {
+            "type": "string",
+            "pattern": "^generated/trend-aggregates-[0-9]{4}\\.json$"
+          }
+        }
+      }
+    }
+  }
+}

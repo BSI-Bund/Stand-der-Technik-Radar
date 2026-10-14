@@ -1,0 +1,29 @@
+{
+  "description": "Getrennte Herkunft des mitgelieferten Radar-Rückfallstands und der manuell gepflegten Trenddaten. Der Browser prüft für das Radar beim Öffnen zusätzlich die aktuelle öffentliche Revision.",
+  "radar": {
+    "published_at": "2026-10-01T12:00:42Z",
+    "verified_at": "2026-10-14T10:49:38.082Z",
+    "public_repository_revision": "a12831136f4122a4c43854622180a24f2576a41e",
+    "historical_extra_catalog_included": true,
+    "supplemental_catalogs": [
+      {
+        "id": "kernel-g0",
+        "source_sha256": "a386560e32cfce13d1e14ad88e453752f8b8e20e4fee0799716503b9819dbb33"
+      }
+    ]
+  },
+  "trends": {
+    "generated_at": "2026-09-23T14:32:21.311817+00:00",
+    "public_repository_revision": "367d775010abee641b258926bb482fcd05270059",
+    "historical_extra_catalog_included": true
+  },
+  "files": {
+    "taxonomy-map.json": "7439933534349676556efee32323d5cd571d192c3e8a4969f91bef7ba948c0f2",
+    "trend-aggregates-2024.json": "6353c58f293e2879a0816564214d110ea2acae1d412ccbca243315d89df94de1",
+    "trend-aggregates-2025.json": "421f45f2b530c8d232410b17eb41a9c28117861946d42b8cf34b0148147842e9",
+    "trend-pack-2024.json": "75a067c4411e761ee51a61ba281c5ed25012b635acceff599f5807fc0d61c194",
+    "trend-pack-2025.json": "fe48ccdc4c4056f46fa45ebf27ea46ca45aa3826e13b483ebff21ea547ad15b1",
+    "ui-manifest.json": "c4f76897e5c672d5b269b92bbcb7dd02919b326a3991b2286fcae98d540e9397",
+    "supplemental-catalogs.json": "8631756323b4307ab7066c96c7cea7b28d62c0884f15944f973dcf0eaea44bd9"
+  }
+}
