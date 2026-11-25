@@ -1,4 +1,4 @@
 # Direct data-pipeline dependencies
-PyYAML==6.0.3
+PyYAML==6.0.4
 jsonschema==4.26.0
 scikit-learn==1.9.1
